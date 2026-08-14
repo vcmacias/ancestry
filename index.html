@@ -3,388 +3,885 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Macías Research Log · Teocaltiche &amp; Nochistlán</title>
-<meta name="description" content="Working research log for the Macías line of Teocaltiche, Jalisco and Nochistlán, Zacatecas. Evidence, open questions, and what has been ruled out.">
+<title>The Macías Family: Teocaltiche to Ciudad Juárez</title>
+<meta name="description" content="Six generations of the Macías family, from a rancho of Teocaltiche in 1788 to Ciudad Juárez, told from the documents themselves.">
 <style>
   :root{
-    --paper:#eceeec;
-    --card:#f6f7f5;
-    --ink:#15181c;
-    --ink-2:#41474e;
-    --ink-3:#6b7278;
-    --rule:#cfd4d3;
-    --rule-2:#dde1df;
-    --accent:#155e63;
-    --accent-2:#0f4247;
-    --ok:#2c5f3a;
-    --ok-bg:#e2ece3;
-    --open:#7d5410;
-    --open-bg:#f2e9d6;
-    --shut:#7b3030;
-    --shut-bg:#f0e2e1;
-    --serif: "Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
-    --sans: -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,"Helvetica Neue",Arial,sans-serif;
-    --mono: ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;
+    --paper:#EDEDE7;
+    --card:#F6F6F2;
+    --ink:#211F1C;
+    --ink-soft:#5B584F;
+    --ink-faint:#87847A;
+    --rule:#CFCEC4;
+    --rule-soft:#DEDDD5;
+    --mx:#2E6B60;
+    --us:#8C5A2B;
+    --loss:#7A2E2E;
+    --font-display:"Hoefler Text","Baskerville","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+    --font-sans:"Avenir Next","Avenir","Segoe UI",system-ui,-apple-system,sans-serif;
+    --font-mono:"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;
+    --measure:66ch;
   }
-  @media (prefers-color-scheme: dark){
+  @media (prefers-color-scheme:dark){
     :root:not([data-theme="light"]){
-      --paper:#14171a; --card:#1b1f23; --ink:#e6e9e7; --ink-2:#b3bab8; --ink-3:#8b9391;
-      --rule:#2e3438; --rule-2:#262c30;
-      --accent:#63c6c6; --accent-2:#8fd8d6;
-      --ok:#8fd0a0; --ok-bg:#1c2c22;
-      --open:#e0bd76; --open-bg:#2e2517;
-      --shut:#e2a3a0; --shut-bg:#2d1d1d;
+      --paper:#16181A;
+      --card:#1D2023;
+      --ink:#E7E5DC;
+      --ink-soft:#A8A69C;
+      --ink-faint:#7C7A72;
+      --rule:#33373A;
+      --rule-soft:#26292C;
+      --mx:#74B7A6;
+      --us:#C79363;
+      --loss:#C9736C;
     }
   }
   :root[data-theme="dark"]{
-    --paper:#14171a; --card:#1b1f23; --ink:#e6e9e7; --ink-2:#b3bab8; --ink-3:#8b9391;
-    --rule:#2e3438; --rule-2:#262c30;
-    --accent:#63c6c6; --accent-2:#8fd8d6;
-    --ok:#8fd0a0; --ok-bg:#1c2c22;
-    --open:#e0bd76; --open-bg:#2e2517;
-    --shut:#e2a3a0; --shut-bg:#2d1d1d;
+    --paper:#16181A;
+    --card:#1D2023;
+    --ink:#E7E5DC;
+    --ink-soft:#A8A69C;
+    --ink-faint:#7C7A72;
+    --rule:#33373A;
+    --rule-soft:#26292C;
+    --mx:#74B7A6;
+    --us:#C79363;
+    --loss:#C9736C;
   }
-  *{box-sizing:border-box}
-  html{-webkit-text-size-adjust:100%}
-  body{
-    margin:0; background:var(--paper); color:var(--ink);
-    font-family:var(--sans); font-size:17px; line-height:1.62;
-    font-kerning:normal;
-  }
-  .wrap{max-width:820px; margin:0 auto; padding:0 24px 96px}
 
-  /* masthead */
-  header.top{padding:64px 0 28px; border-bottom:2px solid var(--ink)}
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--font-display);
+    font-size:17px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:60rem;margin:0 auto;padding:0 1.5rem 6rem}
+
+  /* ---------- masthead ---------- */
+  .masthead{padding:5.5rem 0 2.5rem;border-bottom:1px solid var(--rule)}
   .eyebrow{
-    font-family:var(--mono); font-size:11.5px; letter-spacing:.14em;
-    text-transform:uppercase; color:var(--ink-3); margin:0 0 18px
+    font-family:var(--font-sans);
+    font-size:.7rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:var(--ink-faint);
+    margin:0 0 1.4rem;
   }
   h1{
-    font-family:var(--serif); font-weight:600; font-size:clamp(31px,5.4vw,46px);
-    line-height:1.1; margin:0 0 14px; text-wrap:balance; letter-spacing:-.012em;
+    font-family:var(--font-display);
+    font-weight:400;
+    font-size:clamp(2.4rem,6vw,4rem);
+    line-height:1.04;
+    letter-spacing:-.015em;
+    margin:0 0 1.2rem;
+    text-wrap:balance;
   }
+  h1 em{font-style:italic;color:var(--mx)}
   .standfirst{
-    font-family:var(--serif); font-size:clamp(17px,2.2vw,20px); line-height:1.5;
-    color:var(--ink-2); margin:0; max-width:60ch;
+    max-width:var(--measure);
+    font-size:1.12rem;
+    color:var(--ink-soft);
+    margin:0;
   }
-  .meta{
-    display:flex; flex-wrap:wrap; gap:8px 20px; margin:26px 0 0;
-    font-family:var(--mono); font-size:12px; color:var(--ink-3);
+  .keyline{
+    display:flex;flex-wrap:wrap;gap:.5rem 1.75rem;
+    font-family:var(--font-sans);font-size:.76rem;
+    letter-spacing:.06em;text-transform:uppercase;
+    color:var(--ink-faint);
+    margin-top:2.25rem;
   }
+  .keyline span{display:inline-flex;align-items:center;gap:.5rem}
+  .swatch{width:.7rem;height:.7rem;border-radius:50%;flex:none}
+  .swatch.mx{background:var(--mx)}
+  .swatch.us{background:var(--us)}
+  .swatch.loss{background:var(--loss)}
 
-  /* sections */
-  section{padding:44px 0 8px; border-bottom:1px solid var(--rule-2)}
-  section:last-of-type{border-bottom:none}
+  /* ---------- section furniture ---------- */
+  section{padding-top:4.5rem}
   h2{
-    font-family:var(--serif); font-size:clamp(22px,3.2vw,28px); font-weight:600;
-    line-height:1.2; margin:0 0 6px; letter-spacing:-.008em; text-wrap:balance;
+    font-family:var(--font-sans);
+    font-size:.74rem;font-weight:600;
+    letter-spacing:.2em;text-transform:uppercase;
+    color:var(--ink-faint);
+    margin:0 0 .5rem;
   }
-  .sec-note{color:var(--ink-3); font-size:14.5px; margin:0 0 26px; max-width:62ch}
-  h3{
-    font-family:var(--sans); font-size:15px; font-weight:670; letter-spacing:.005em;
-    margin:30px 0 8px;
-  }
-  p{margin:0 0 15px; max-width:68ch}
-  a{color:var(--accent); text-decoration-thickness:1px; text-underline-offset:2px}
-  a:hover{color:var(--accent-2)}
-  a:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:2px}
-  strong{font-weight:640}
-  em{font-style:italic}
-  code, .film{
-    font-family:var(--mono); font-size:.88em; background:var(--card);
-    border:1px solid var(--rule-2); border-radius:3px; padding:1px 5px;
+  .section-lede{
+    font-size:1.28rem;line-height:1.45;max-width:var(--measure);
+    margin:0 0 2.75rem;color:var(--ink);text-wrap:balance;
   }
 
-  /* status chips */
-  .chip{
-    display:inline-block; font-family:var(--mono); font-size:10.5px; letter-spacing:.1em;
-    text-transform:uppercase; padding:3px 8px; border-radius:3px; vertical-align:2px;
-    white-space:nowrap;
+  /* ---------- descent ---------- */
+  .descent{position:relative;padding-left:2.25rem}
+  .descent::before{
+    content:"";position:absolute;left:.36rem;top:.6rem;bottom:2.2rem;
+    width:1px;background:var(--rule);
   }
-  .c-ok{background:var(--ok-bg); color:var(--ok)}
-  .c-open{background:var(--open-bg); color:var(--open)}
-  .c-shut{background:var(--shut-bg); color:var(--shut)}
+  .gen{position:relative;padding-bottom:2.75rem}
+  .gen::before{
+    content:"";position:absolute;left:-2.25rem;top:.62rem;
+    width:.78rem;height:.78rem;border-radius:50%;
+    background:var(--paper);border:1.5px solid var(--mx);
+  }
+  .gen.us-side::before{border-color:var(--us)}
+  .gen.you::before{background:var(--mx);border-color:var(--mx)}
+  .rel{
+    font-family:var(--font-sans);font-size:.7rem;
+    letter-spacing:.14em;text-transform:uppercase;
+    color:var(--ink-faint);margin:0 0 .3rem;
+  }
+  .couple{
+    font-size:clamp(1.3rem,2.6vw,1.72rem);
+    line-height:1.24;margin:0 0 .45rem;letter-spacing:-.01em;
+  }
+  .couple .amp{color:var(--ink-faint);font-style:italic;padding:0 .18em}
+  .life{
+    font-family:var(--font-sans);font-size:.86rem;line-height:1.65;
+    color:var(--ink-soft);margin:0;max-width:52ch;
+  }
+  .life b{font-weight:600;color:var(--ink)}
+  .union{
+    font-family:var(--font-sans);font-size:.78rem;
+    color:var(--mx);margin:.55rem 0 0;letter-spacing:.02em;
+  }
+  .gen.us-side .union{color:var(--us)}
 
-  /* descent chain */
-  .chain{list-style:none; margin:0; padding:0}
-  .chain > li{
-    position:relative; padding:0 0 26px 30px; border-left:2px solid var(--rule);
+  .aside-line{
+    margin-top:1.1rem;padding-left:1rem;
+    border-left:1px solid var(--rule);
   }
-  .chain > li:last-child{border-left-color:transparent; padding-bottom:4px}
-  .chain > li::before{
-    content:""; position:absolute; left:-6px; top:7px; width:10px; height:10px;
-    border-radius:50%; background:var(--paper); border:2px solid var(--accent);
-  }
-  .gen{
-    font-family:var(--mono); font-size:11px; letter-spacing:.11em; text-transform:uppercase;
-    color:var(--ink-3); display:block; margin-bottom:3px;
-  }
-  .names{font-family:var(--serif); font-size:19px; line-height:1.3; margin:0 0 3px}
-  .chain .src{font-size:13.5px; color:var(--ink-3); margin:4px 0 0; max-width:60ch}
+  .aside-line .rel{margin-bottom:.15rem}
+  .aside-line .couple{font-size:1.06rem;margin-bottom:.25rem}
+  .aside-line .life{font-size:.8rem}
 
-  /* callout */
-  .callout{
-    background:var(--card); border:1px solid var(--rule);
-    border-left:4px solid var(--open); border-radius:4px;
-    padding:20px 22px; margin:0 0 22px;
+  .kids{
+    font-family:var(--font-sans);font-size:.79rem;line-height:1.7;
+    color:var(--ink-faint);margin:.8rem 0 0;max-width:56ch;
   }
-  .callout.shut{border-left-color:var(--shut)}
-  .callout.ok{border-left-color:var(--ok)}
-  .callout h3{margin-top:0}
-  .callout p:last-child{margin-bottom:0}
-  .callout > .chip{margin-bottom:10px}
+  .kids b{color:var(--ink-soft);font-weight:600}
 
-  /* tables */
-  .tw{overflow-x:auto; margin:0 0 22px; border:1px solid var(--rule); border-radius:4px; background:var(--card)}
-  table{border-collapse:collapse; width:100%; font-size:14.5px; min-width:540px}
-  th,td{text-align:left; padding:10px 14px; border-bottom:1px solid var(--rule-2); vertical-align:top}
-  thead th{
-    font-family:var(--mono); font-size:11px; letter-spacing:.09em; text-transform:uppercase;
-    color:var(--ink-3); font-weight:500; background:transparent;
-    border-bottom:1px solid var(--rule);
+  /* ---------- brothers inset ---------- */
+  .inset{
+    background:var(--card);
+    border:1px solid var(--rule-soft);
+    border-left:2px solid var(--mx);
+    padding:1.4rem 1.5rem;
+    margin:1.3rem 0 0;
+    max-width:52ch;
   }
-  tbody tr:last-child td{border-bottom:none}
-  td.n{font-family:var(--mono); font-variant-numeric:tabular-nums; white-space:nowrap}
+  .inset h3{
+    font-family:var(--font-sans);font-size:.7rem;font-weight:600;
+    letter-spacing:.15em;text-transform:uppercase;
+    color:var(--mx);margin:0 0 .6rem;
+  }
+  .inset p{margin:0;font-size:.98rem;line-height:1.6;color:var(--ink-soft)}
+  .inset p + p{margin-top:.7rem}
+  .inset.grief{border-left-color:var(--loss)}
+  .inset.grief h3{color:var(--loss)}
 
-  /* task list */
-  ol.tasks{list-style:none; counter-reset:t; margin:0; padding:0}
-  ol.tasks > li{
-    counter-increment:t; position:relative; padding:0 0 22px 46px; margin:0;
+  /* ---------- 1893 ---------- */
+  .obit{
+    display:grid;grid-template-columns:auto 1fr;gap:.1rem 1.5rem;
+    font-family:var(--font-sans);font-size:.9rem;
+    margin:1.1rem 0 0;
   }
-  ol.tasks > li::before{
-    content:counter(t); position:absolute; left:0; top:0;
-    font-family:var(--mono); font-size:12px; width:28px; height:28px;
-    display:grid; place-items:center; border:1px solid var(--rule);
-    border-radius:50%; color:var(--ink-3); background:var(--card);
+  .obit dt{
+    color:var(--loss);font-variant-numeric:tabular-nums;
+    white-space:nowrap;font-weight:600;font-size:.82rem;
+    padding-top:.34rem;
   }
-  ol.tasks h3{margin:2px 0 5px}
-  ol.tasks p{margin:0; font-size:15px; color:var(--ink-2)}
+  .obit dd{margin:0;padding:.28rem 0;color:var(--ink-soft);border-bottom:1px solid var(--rule-soft)}
+  .obit dd:last-of-type{border-bottom:0}
+  .obit dd b{color:var(--ink);font-weight:600}
 
-  ul.plain{margin:0 0 18px; padding-left:20px}
-  ul.plain li{margin-bottom:8px; max-width:66ch}
+  /* ---------- timeline ---------- */
+  .era{
+    border-left:2px solid var(--mx);
+    padding:0 0 2.5rem 1.5rem;
+    margin-left:.2rem;
+  }
+  .era.us{border-left-color:var(--us)}
+  .era.loss1893{border-left-color:var(--loss)}
+  .era.loss1893 .era-place{color:var(--loss)}
+  .era-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:.4rem .9rem;margin-bottom:.15rem}
+  .era-place{
+    font-family:var(--font-display);font-size:1.3rem;letter-spacing:-.01em;margin:0;
+  }
+  .era-span{
+    font-family:var(--font-sans);font-size:.72rem;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--ink-faint);font-variant-numeric:tabular-nums;
+  }
+  .era-why{
+    font-family:var(--font-sans);font-size:.85rem;color:var(--ink-soft);
+    margin:0 0 1.1rem;max-width:56ch;font-style:italic;
+  }
+  .events{list-style:none;margin:0;padding:0;display:grid;gap:.1rem}
+  .events li{
+    display:grid;grid-template-columns:7.5rem 1fr;gap:1.1rem;
+    padding:.42rem 0;border-top:1px solid var(--rule-soft);
+    font-family:var(--font-sans);font-size:.88rem;line-height:1.55;
+  }
+  .events li:first-child{border-top:0}
+  .when{
+    color:var(--ink-faint);font-variant-numeric:tabular-nums;
+    font-size:.8rem;letter-spacing:.02em;padding-top:.08rem;
+  }
+  .what{color:var(--ink-soft);margin:0}
+  .what b{color:var(--ink);font-weight:600}
+  .what .doc{
+    font-family:var(--font-mono);font-size:.74rem;color:var(--ink-faint);
+    display:block;margin-top:.15rem;
+  }
+
+  /* ---------- tree diagram ---------- */
+  .tree{
+    display:flex;flex-direction:column;align-items:center;
+    margin:0 auto;max-width:34rem;
+  }
+  .tnode{
+    position:relative;width:100%;text-align:center;
+    background:var(--card);border:1px solid var(--rule-soft);
+    border-top:2px solid var(--mx);
+    padding:1rem 1.15rem 1.05rem;
+  }
+  .tnode + .tnode,
+  .tpair + .tnode,
+  .tnode + .tpair{margin-top:2.6rem}
+  .tnode + .tnode::before,
+  .tpair + .tnode::before,
+  .tnode + .tpair::before{
+    content:"";position:absolute;left:50%;top:-2.6rem;
+    width:1px;height:2.6rem;background:var(--rule);
+  }
+  .tnode.you{border-top-color:var(--us);background:transparent}
+  .tgen{
+    font-family:var(--font-sans);font-size:.64rem;font-weight:600;
+    letter-spacing:.15em;text-transform:uppercase;
+    color:var(--ink-faint);margin:0 0 .45rem;
+    font-variant-numeric:tabular-nums;
+  }
+  .tname{
+    font-family:var(--font-display);font-size:1.1rem;line-height:1.28;
+    margin:0;letter-spacing:-.005em;
+  }
+  .tamp{
+    display:block;font-family:var(--font-sans);font-size:.66rem;
+    letter-spacing:.14em;text-transform:uppercase;
+    color:var(--ink-faint);margin:.25rem 0;
+  }
+  .tname.sp{color:var(--ink-soft)}
+  .tdate{
+    font-family:var(--font-sans);font-size:.73rem;line-height:1.4;
+    color:var(--ink-faint);margin:.12rem 0 0;
+    font-variant-numeric:tabular-nums;letter-spacing:.03em;
+  }
+  .tplace{
+    font-family:var(--font-sans);font-size:.74rem;line-height:1.5;
+    color:var(--ink-faint);margin:.6rem 0 0;
+  }
+
+  /* the one branch: two brothers, one wife */
+  .tpair{position:relative;width:100%;display:flex;gap:1.1rem;align-items:stretch}
+  .tpair > .tnode{margin-top:0;flex:1 1 0;min-width:0}
+  .tpair > .tnode::before{display:none}
+  .tpair > .tnode.brother{
+    border-top-color:var(--ink-faint);
+    background:transparent;
+  }
+  .tpair > .tnode.brother .tname{font-size:1rem}
+  @media (max-width:32rem){
+    .tpair{flex-direction:column;gap:.9rem}
+  }
+
+  /* ---------- map ---------- */
+  .mapwrap{margin:0 0 3.75rem}
+  .map{display:block;width:100%;max-width:36rem;height:auto;margin:0 auto}
+  .map .land{stroke:var(--rule);stroke-width:1.25;stroke-linejoin:round}
+  .map .land.mx{fill:var(--mx);fill-opacity:.13}
+  .map .land.us{fill:var(--ink-faint);fill-opacity:.07}
+  .map .cty{
+    font-family:var(--font-sans);font-size:14px;font-weight:600;
+    letter-spacing:.2em;fill:var(--ink-faint);opacity:.65;
+  }
+  .map .lbl{font-family:var(--font-sans);font-size:16px;font-weight:600;fill:var(--ink)}
+  .map .sub{font-family:var(--font-sans);font-size:12.5px;fill:var(--ink-faint)}
+  .map .dmx{fill:var(--mx)}
+  .map .dus{fill:var(--us)}
+  .map .ring{fill:none;stroke:var(--mx);stroke-width:1.25;opacity:.5}
+  .map .move{fill:none;stroke:var(--us);stroke-width:2.25;stroke-dasharray:8 6;stroke-linecap:round}
+  .map .ahd{fill:var(--us)}
+  .map .leader{fill:none;stroke:var(--rule);stroke-width:1}
+  .map .numc{fill:var(--paper);stroke:var(--us);stroke-width:1.5}
+  .map .nm{font-family:var(--font-sans);font-size:12.5px;fill:var(--ink-soft)}
+  .map .yr{
+    font-family:var(--font-sans);font-size:12.5px;font-weight:700;
+    fill:var(--us);letter-spacing:.02em;
+    stroke:var(--paper);stroke-width:4.5;paint-order:stroke fill;
+  }
+  .maplegend{
+    list-style:none;margin:1.6rem auto 0;padding:0;max-width:36rem;
+    display:grid;gap:.1rem;
+  }
+  .maplegend li{
+    display:grid;grid-template-columns:1.6rem 1fr;gap:.8rem;
+    padding:.45rem 0;border-top:1px solid var(--rule-soft);
+    font-family:var(--font-sans);font-size:.86rem;line-height:1.55;color:var(--ink-soft);
+  }
+  .maplegend li:first-child{border-top:0}
+  .maplegend .n{
+    color:var(--us);font-weight:700;font-variant-numeric:tabular-nums;text-align:center;
+  }
+  .maplegend b{color:var(--ink);font-weight:600}
+  .maplegend .pin{
+    width:.62rem;height:.62rem;border-radius:50%;margin:.42rem auto 0;
+  }
+  .maplegend .pin.mx{background:var(--mx)}
+  .maplegend .pin.us{background:var(--us)}
+  .mapcap{
+    font-family:var(--font-sans);font-size:.84rem;line-height:1.55;
+    color:var(--ink-faint);max-width:36rem;margin:1.5rem auto 0;text-align:center;
+  }
+  .sub-h{
+    font-family:var(--font-sans);font-size:.7rem;font-weight:600;
+    letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);
+    max-width:36rem;margin:2.2rem auto .2rem;
+  }
+
+  /* ---------- document quote ---------- */
+  .quote{
+    max-width:46rem;margin:0 0 2rem;padding:1.5rem 1.6rem;
+    background:var(--card);border:1px solid var(--rule-soft);
+    border-left:2px solid var(--mx);
+  }
+  .quote p{
+    margin:0;font-size:1.02rem;line-height:1.62;color:var(--ink);
+    font-style:italic;
+  }
+  .quote p b{font-style:normal;font-weight:600}
+  .quote .src{
+    font-family:var(--font-mono);font-size:.72rem;font-style:normal;
+    color:var(--ink-faint);margin:.9rem 0 0;display:block;letter-spacing:.01em;
+  }
+  .quote .gloss{
+    font-family:var(--font-sans);font-size:.9rem;font-style:normal;
+    color:var(--ink-soft);margin:.9rem 0 0;line-height:1.6;
+  }
+
+  /* ---------- cleared ledger ---------- */
+  .ledger{list-style:none;margin:1.2rem 0 0;padding:0;max-width:46rem}
+  .ledger li{
+    display:grid;grid-template-columns:1.4rem 1fr;gap:.75rem;
+    padding:.5rem 0;border-top:1px solid var(--rule-soft);
+    font-family:var(--font-sans);font-size:.87rem;line-height:1.55;
+    color:var(--ink-soft);
+  }
+  .ledger li:first-child{border-top:0}
+  .ledger .mark{color:var(--loss);font-weight:600;text-align:center}
+  .ledger .mark.open{color:var(--mx)}
+  .ledger b{color:var(--ink);font-weight:600}
+
+  /* ---------- open questions + sources ---------- */
+  .cols{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr))}
+  .note{
+    background:var(--card);border:1px solid var(--rule-soft);
+    padding:1.2rem 1.3rem;
+  }
+  .note h3{
+    font-family:var(--font-sans);font-size:.72rem;font-weight:600;
+    letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);
+    margin:0 0 .5rem;
+  }
+  .note p{margin:0;font-size:.92rem;line-height:1.6;color:var(--ink-soft)}
+
+  table{width:100%;border-collapse:collapse;font-family:var(--font-sans);font-size:.82rem}
+  .tablewrap{overflow-x:auto;border-top:1px solid var(--rule)}
+  th{
+    text-align:left;font-weight:600;font-size:.7rem;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--ink-faint);
+    padding:.8rem 1rem .8rem 0;white-space:nowrap;
+  }
+  td{padding:.62rem 1rem .62rem 0;border-top:1px solid var(--rule-soft);color:var(--ink-soft);vertical-align:top}
+  td.rec{color:var(--ink);white-space:nowrap}
+  td.cite{font-family:var(--font-mono);font-size:.72rem;color:var(--ink-faint);white-space:nowrap}
 
   footer{
-    margin-top:56px; padding-top:26px; border-top:2px solid var(--ink);
-    font-size:14px; color:var(--ink-3);
+    margin-top:5rem;padding-top:1.6rem;border-top:1px solid var(--rule);
+    font-family:var(--font-sans);font-size:.78rem;color:var(--ink-faint);
+    display:flex;flex-wrap:wrap;gap:.4rem 1.5rem;justify-content:space-between;
   }
-  footer p{max-width:66ch}
 
-  @media (max-width:600px){
-    body{font-size:16.5px}
-    .wrap{padding:0 18px 72px}
-    header.top{padding-top:44px}
+  @media (max-width:34rem){
+    .events li{grid-template-columns:1fr;gap:.1rem}
+    .when{padding-top:0}
+    .descent{padding-left:1.6rem}
+    .gen::before{left:-1.6rem}
   }
 </style>
 </head>
 <body>
 <div class="wrap">
 
-<header class="top">
-  <p class="eyebrow">Working research log</p>
-  <h1>The Macías line of Teocaltiche and Nochistlán</h1>
-  <p class="standfirst">A record of what the documents actually say, what is still open, and which avenues have already been closed. Kept so the same ground is not searched twice.</p>
-  <div class="meta">
-    <span>Updated 14 August 2026</span>
-    <span>Frontier: generation 9</span>
-    <span>Region: Los Altos de Jalisco &middot; Zacatecas</span>
-  </div>
-</header>
+  <header class="masthead">
+    <p class="eyebrow">A documented descent, Jalisco &middot; Zacatecas &middot; Arizona &middot; Kansas &middot; Chihuahua</p>
+    <h1>Six generations of the <em>Macías</em> family, from a rancho called Guadalupe to the Zaragoza bridge</h1>
+    <p class="standfirst">Every name and date below stands on a primary document: a parish register, a civil act, a birth certificate, a border card. Where the records disagree, the page says so. The line now runs back to a baptism in May 1788, and stops there for a reason the last section explains.</p>
+    <div class="keyline">
+      <span><i class="swatch mx"></i>Years in Mexico</span>
+      <span><i class="swatch us"></i>Years in the United States</span>
+      <span><i class="swatch loss"></i>The summer of 1893</span>
+    </div>
+  </header>
 
-<section>
-  <h2>Where the research stands</h2>
-  <p class="sec-note">In one paragraph, for anyone picking this up cold.</p>
-  <p>The line is documented without a gap from the present back to a couple named <strong>Manuel Macías and María Felipa González</strong>, who appear at Teocaltiche in the late 1780s. Every generation below them rests on its own primary record. Above them there is nothing. Their marriage is not in the Teocaltiche register, and the evidence says they arrived from another parish shortly before 1788. Finding that parish is the whole problem, and it would give us their parents, which would be generation nine.</p>
-  <p>One thing that looked settled has turned out not to be. The single document that describes this family's <em>calidad</em> (their recorded caste) may belong to a different couple with the same two names. That is set out below, because a good deal was built on it.</p>
-</section>
+  <section>
+    <h2>The line at a glance</h2>
+    <p class="section-lede">Six generations carrying the name, each joined to the next by a birth recorded in a register. The whole page is the detail behind this.</p>
 
-<section>
-  <h2>The documented descent</h2>
-  <p class="sec-note">Each link below is carried by a named record, not by inference. The generations further down, and the family's move north into Kansas, New Mexico and Texas, are covered in the separate family narrative.</p>
+    <div class="tree">
 
-  <ol class="chain">
-    <li>
-      <span class="gen">Generation 8 &middot; the wall</span>
-      <p class="names"><strong>Manuel Macías</strong> and <strong>María Felipa González</strong></p>
-      <p class="src">Named as José Antonio's parents on the 1813 marriage act and again on an 1833 baptism. Married roughly 1780 to 1786, <strong>parish unknown</strong>. Neither has been found in a burial register.</p>
-    </li>
-    <li>
-      <span class="gen">Generation 7</span>
-      <p class="names"><strong>José Antonio Macías</strong> and <strong>Matiana de Olmos</strong></p>
-      <p class="src">Married 14 January 1813 at Nuestra Señora de los Dolores, Teocaltiche. He was 25, so born about 1787, and is called <em>vecino de los Cuervos</em>. Her father Lorenzo de Olmos was already deceased. José Antonio himself was dead before February 1854.</p>
-    </li>
-    <li>
-      <span class="gen">Generation 6</span>
-      <p class="names"><strong>Luis Macías</strong> and <strong>Daría Acosta Martínez</strong></p>
-      <p class="src">Of Buenavista, Teocaltiche. He was a day labourer. His civil death act of 17 July 1893 names him <em>hijo legítimo de Antonio Macías y de Matiana Olmos</em>, which is the hard link upward. Daría reported both his death and their son's, ten days apart.</p>
-    </li>
-    <li>
-      <span class="gen">Generation 5</span>
-      <p class="names"><strong>Sotero Macías</strong> and <strong>Agustina Ruiz</strong></p>
-      <p class="src">Sotero died at Teocaltiche on 6 July 1893, aged 29. His death act names his parents Luis Macías and Daría Acosta, and records Agustina Ruiz as his widow.</p>
-    </li>
-    <li>
-      <span class="gen">Generation 4</span>
-      <p class="names"><strong>Manuel Macías</strong>, born December 1892 at Nochistlán, Zacatecas</p>
-      <p class="src">Born about six months before his father Sotero died. From here the line continues into the United States and is told in the family narrative rather than here.</p>
-    </li>
-  </ol>
-</section>
+      <div class="tnode">
+        <p class="tgen">living 1788</p>
+        <p class="tname">Manuel Macías</p>
+        <p class="tdate">dates unknown</p>
+        <span class="tamp">and</span>
+        <p class="tname sp">María Felipa González</p>
+        <p class="tdate">dates unknown</p>
+        <p class="tplace">At the rancho of Guadalupe, Teocaltiche. Incomers, from somewhere not yet known.</p>
+      </div>
 
-<section>
-  <h2>The open question that matters most</h2>
-  <p class="sec-note">Raised 14 August 2026. It affects how the whole line should be read.</p>
+      <div class="tnode">
+        <p class="tgen">married 1813</p>
+        <p class="tname">José Antonio Macías</p>
+        <p class="tdate">about 1787 &ndash; before 1854</p>
+        <span class="tamp">and</span>
+        <p class="tname sp">Matiana Olmos</p>
+        <p class="tdate">about 1791 &ndash; unknown</p>
+        <p class="tplace">Of los Cuervos. He was twenty-five, she was twenty-two.</p>
+      </div>
 
-  <div class="callout">
-    <span class="chip c-open">Unresolved</span>
-    <h3>Is the <em>mulato</em> designation actually this family's?</h3>
-    <p>A baptism of <strong>28 May 1788</strong> at the <em>puesto de Guadalupe</em> in Teocaltiche parish records <strong>José María Macías</strong>, son of <em>José Manuel Macías and María Felipa González</em>, and the children of that couple are written <strong>mulato</strong>. It is the only document that gives this family a caste, and a lot has been reasoned from it.</p>
-    <p>The problem is that the act is joined to our line <strong>only by the parents' names matching</strong>. Three things weaken that:</p>
-    <ul class="plain">
-      <li>It is a <strong>different rancho</strong>. The 1788 act is at the <em>puesto de Guadalupe</em>; José Antonio in 1813 is at <em>los Cuervos</em>.</li>
-      <li>José María is a <strong>presumed brother, never a documented one</strong>. No record names him and José Antonio together.</li>
-      <li>Teocaltiche had <strong>three or four different women called Felipa González inside five years</strong>, one of them a <em>Doña</em>, and Manuel Macías is a common name. In this parish, matching two names is weak evidence.</li>
+      <div class="tnode">
+        <p class="tgen">married 1854</p>
+        <p class="tname">Luis Macías Olmos</p>
+        <p class="tdate">1833 &ndash; 17 July 1893</p>
+        <span class="tamp">and</span>
+        <p class="tname sp">Daría Acosta Martínez</p>
+        <p class="tdate">about 1835 &ndash; 20 July 1908</p>
+        <p class="tplace">Of Buenavista. A day labourer. Both died at Teocaltiche.</p>
+      </div>
+
+      <div class="tnode">
+        <p class="tgen">married by 1881</p>
+        <p class="tname">Sotero Macías Acosta</p>
+        <p class="tdate">about 1864 &ndash; 6 July 1893</p>
+        <span class="tamp">and</span>
+        <p class="tname sp">Agustina Ruiz</p>
+        <p class="tdate">dates unknown</p>
+        <p class="tplace">Dead at twenty-nine, seven months after his last son was born.</p>
+      </div>
+
+      <div class="tpair">
+        <div class="tnode">
+          <p class="tgen">together from about 1926</p>
+          <p class="tname">Manuel Macías Ruiz</p>
+          <p class="tdate">26 December 1892 &ndash; 1965</p>
+          <span class="tamp">and</span>
+          <p class="tname sp">Ascensión Cordero</p>
+          <p class="tdate">3 June 1886 &ndash; after 1944</p>
+          <p class="tplace">Born at La Ciénega. A copper miner at Morenci, Arizona.</p>
+        </div>
+        <div class="tnode brother">
+          <p class="tgen">his older brother</p>
+          <p class="tname">Bernardino Macías</p>
+          <p class="tdate">19 May 1881 &ndash; after 1918</p>
+          <p class="tplace">Married Ascensión first, in 1914, and went north before Manuel did. After he was gone, Manuel married his widow and raised his children.</p>
+        </div>
+      </div>
+
+      <div class="tnode">
+        <p class="tgen">married 1944</p>
+        <p class="tname">Carmen Cordero Macías</p>
+        <p class="tdate">9 April 1925 &ndash; 1998</p>
+        <span class="tamp">and</span>
+        <p class="tname sp">Guadalupe Amézquita</p>
+        <p class="tdate">1920 &ndash; 2009</p>
+        <p class="tplace">Born in Kansas, married at Zaragoza, Chihuahua.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>The descent</h2>
+    <p class="section-lede">Read downward. The line on the left is the direct descent. Everything set beside it is family standing off the line.</p>
+
+    <div class="descent">
+
+      <div class="gen">
+        <p class="rel">Fifth great-grandparents &middot; the earliest names</p>
+        <p class="couple">Manuel Macías <span class="amp">and</span> María Felipa González</p>
+        <p class="life">Named on two documents and no more: their son's marriage act of 1813, and a baptism of <b>28 May 1788</b> which places a couple of these same two names at <b>Guadalupe</b>, a rancho of the Teocaltiche jurisdiction, and records their children as <b>mulato</b>. They did not marry at Teocaltiche and they were not from there. Where they came from is the open question of this page.</p>
+        <p class="kids"><b>Known children:</b> José Antonio (about 1787) &middot; <b>José María</b>, baptised 28 May 1788, born fourteen days earlier</p>
+      </div>
+
+      <div class="gen">
+        <p class="rel">Fourth great-grandparents</p>
+        <p class="couple">José Antonio Macías <span class="amp">and</span> Matiana Olmos</p>
+        <p class="life">Married at Teocaltiche on <b>14 January 1813</b>, he twenty-five and she twenty-two, both living at <b>los Cuervos</b>. The clerk calls him <i>vecino</i>, a resident, never <i>originario</i>, a native, and leaves the caste column beside his name <b>blank</b> while filling it in for his bride and for the couple married just above them. By 1833 the family had moved to <b>Buenavista</b>. He was dead before February 1854, when his son's marriage register calls him <i>el finado</i>.</p>
+        <div class="aside-line">
+          <p class="rel">Matiana's parents</p>
+          <p class="couple">Lorenzo de Olmos <span class="amp">and</span> María López</p>
+          <p class="life">A local Teocaltiche family, which is how we know José Antonio married <i>into</i> the parish rather than out of it. Lorenzo was already <i>difunto</i> by the wedding in 1813.</p>
+        </div>
+      </div>
+
+      <div class="gen">
+        <p class="rel">Third great-grandparents</p>
+        <p class="couple">Luis Macías Olmos <span class="amp">and</span> Daría Acosta Martínez</p>
+        <p class="life">Luis, born <b>1833 or 1834 at Buenavista</b>, a <i>jornalero</i>, died at two in the morning on <b>17 July 1893</b> at Teocaltiche. Daría, born about 1835, outlived him by fifteen years and died at Teocaltiche on <b>20 July 1908</b>.</p>
+        <p class="union">Married 4 February 1854, Nuestra Señora de los Dolores, Teocaltiche. He was twenty, she was eighteen.</p>
+        <p class="kids"><b>Their children:</b> María Encarnación (1863) &middot; Sotero (about 1864) &middot; Juana (1869) &middot; María Ascención (1872) &middot; José Teodosio &middot; Paula &middot; Antonio &middot; María Plásida</p>
+        <div class="aside-line">
+          <p class="rel">And on the other sides</p>
+          <p class="couple">Gervasio Acosta <span class="amp">and</span> Trinidad Martínez</p>
+          <p class="life">Named on their daughter&rsquo;s marriage act in 1854, which gives Daría as <b>eighteen</b>. A baptism at <b>La Santísima Trinidad in Villa Hidalgo</b> in 1831 names the same two parents, and would put the family in the same parish where Ascensión Cordero was christened fifty-five years later &mdash; but it would also make Daría twenty-two at her wedding, so it may belong to another woman of the same name.</p>
+          <p class="couple" style="margin-top:.9rem">Juan Ruiz <span class="amp">and</span> Fortunata</p>
+          <p class="life">Parents of Agustina Ruiz. Her surname is written <b>Islas</b> in one grandson's baptism and <b>Aguero</b> in another.</p>
+        </div>
+      </div>
+
+      <div class="gen">
+        <p class="rel">Second great-grandparents</p>
+        <p class="couple">Sotero Macías Acosta <span class="amp">and</span> Agustina Ruiz</p>
+        <p class="life">Sotero was born about <b>1864</b> and died at <b>twenty-nine</b>, on the night of 6 July 1893, of <i>fríos viciosos</i>. His mother Daría walked to the civil registry the next morning to report it. Agustina was left a widow with an infant.</p>
+        <p class="kids"><b>Their children:</b> Bernardino (1881) &middot; Maximiano (1883) &middot; Maximino (died 1884) &middot; Porfiria (1885) &middot; Francisca &middot; María &middot; Rafaela &middot; Perfecta &middot; Ambrosio (1890, died 1893) &middot; María (1891, died 1961) &middot; <b>José Manuel (1892)</b></p>
+        <div class="aside-line">
+          <p class="rel">And on Ascensión's side</p>
+          <p class="couple">Petronilo Cordero <span class="amp">and</span> Antonia Arriaga</p>
+          <p class="life">Of <b>Paso de Sotos</b>, Jalisco. Their daughter Ascensión was born 3 June 1886 and registered at Teocaltiche two days later.</p>
+        </div>
+      </div>
+
+      <div class="gen">
+        <p class="rel">Great-grandparents</p>
+        <p class="couple">Manuel Macías Ruiz <span class="amp">and</span> Ascensión Cordero</p>
+        <p class="life">Manuel was born at eight in the morning on <b>26 December 1892</b> at <b>La Ciénega</b>, in the Nochistlán parish, and baptised there on 11 February 1893. For the rest of his life he told American officials he was born on the twenty-fourth. He was a <b>copper miner at Morenci</b>, never naturalised, and carried a burn scar on his right jaw, noted on his border cards, which is how two of them were proved to be the same man. He died in 1965.</p>
+        <div class="inset">
+          <h3>Two brothers, one wife</h3>
+          <p>Ascensión Cordero married <b>Bernardino Macías</b> at Morenci in 1914, twice in seven weeks: before a justice of the peace on 5 March, and before a Catholic pastor on 22 April. Bernardino was Manuel's <b>older brother</b>, born at Teocaltiche on 19 May 1881 to the same parents.</p>
+          <p>Bernardino went north first. Manuel followed him in 1915. After Bernardino was gone, Manuel married his brother's widow and raised his children. Because both men were Macías, no family tree ever caught the seam.</p>
+        </div>
+        <p class="kids"><b>Ascensión's six children:</b> Candelaria (1915) and Ascensión Petronilo (1918) and Ester (about 1920) were Bernardino's, and are marked step-children to Manuel on the 1930 census. Pedra was born in 1916 and died in 1917. <b>Carmen (1925) and Manuel Jr. (1928) were Manuel's own</b>, and the census marks them plainly as his sons.</p>
+      </div>
+
+      <div class="gen us-side">
+        <p class="rel">Grandparents</p>
+        <p class="couple">Carmen Cordero Macías <span class="amp">and</span> Guadalupe Amézquita</p>
+        <p class="life">Carmen was born <b>9 April 1925</b> in Kansas, at a place he himself called <b>&ldquo;Laines, Kansas&rdquo;</b> &mdash; no such town exists, and it is most likely <b>Lyons, in Rice County</b>, heard in Spanish and written down by ear. He died in 1998. He registered for the draft at Fort Hancock, Texas, in April 1943, naming his father Manuel as his contact. Lupe was born in <b>1920, in New Mexico</b>, and the family had moved to Texas by the time her brother Antonio was born a few years later. The 1940 census finds her at <b>Ysleta, El Paso County</b>, aged twenty and single, in the household of her widowed mother <b>Isabel</b>, a seamstress; her grandmother <b>Emilia</b>, aged seventy-five, was living with them. Her father Marcelino was already dead. She lived until 2009. The 1944 marriage act gives her birthplace as <b>&ldquo;Calabad, N.M.&rdquo;</b>, which is very likely <b>Carlsbad</b>, though no record yet says so outright.</p>
+        <p class="union">Married 8 November 1944 at Zaragoza, Chihuahua. Both were living at Ysleta, Texas, and crossed the river to marry.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>The wall at 1788</h2>
+    <p class="section-lede">The line ends on one page of a Teocaltiche baptism register, and the reason it ends there is not that the record is missing. It is that the family had only just arrived.</p>
+
+    <div class="quote">
+      <p>En Theoc.<sup>e</sup> en <b>veinte y ocho de Mayo de ochenta y ocho</b>, Yo el Br. D.<sup>n</sup> Fernando Mart.<sup>z</sup> baup.<sup>é</sup> solednem.<sup>te</sup> y puse los santo olios á <b>Jose Maria, mulato, de Guadalupe</b>, de <b>catorce dias de nacida</b>, h.l. de <b>Man.<sup>l</sup> Macias</b> y de <b>Maria Felipa Gonz.</b>, P.<sup>s</sup> Jose Calisto Romo&hellip;
+        <span class="src">Bautismos 1787&ndash;1795 &middot; DGS 004739969 img 40 &middot; left leaf, fourth entry</span>
+      </p>
+      <p class="gloss">Four facts in one sentence: the date, the rancho, the caste, and the parents. It is the only document that describes this couple rather than merely naming them, and it was found by turning pages, because that film appears in no index and no full-text corpus.</p>
+    </div>
+
+    <p class="section-lede" style="font-size:1.05rem;margin-bottom:.6rem">What the register says about them, and what it does not</p>
+    <ul class="ledger">
+      <li><span class="mark open">&bull;</span><span>They were at <b>Guadalupe</b>, a rancho of the Teocaltiche jurisdiction, in May 1788, and their children were written <b>mulato</b>. Twenty-five years later their son was living at <b>los Cuervos</b>, a different rancho in the same jurisdiction.</span></li>
+      <li><span class="mark open">&bull;</span><span>Those two acts are joined <b>only by the parents' names</b>. Teocaltiche had three or four different women called Felipa González inside five years, one of them a <i>Doña</i>, and Manuel Macías is a common name, so the caste written on the 1788 page is <b>not yet certain to be this family's</b>. José Antonio's own baptism would settle it, and it should lie in the first forty images of the same film.</span></li>
+      <li><span class="mark open">&bull;</span><span>On his 1813 marriage act the clerk fills in the caste for the bride and for the couple married directly above, and <b>leaves the space beside José Antonio empty</b>. He is called a resident of los Cuervos, never a native of anywhere.</span></li>
     </ul>
-    <p>If the 1788 act belongs to another couple, then <em>mulato</em> is not this family's designation, and the assumption that the surname may not lead back to a Spanish immigrant loses its main support.</p>
-  </div>
 
-  <div class="callout ok">
-    <span class="chip c-ok">Unaffected</span>
-    <h3>The couple were incomers. That still holds.</h3>
-    <p>This conclusion does not depend on the 1788 act. It stands on four independent legs: José Antonio is absent from the Teocaltiche baptisms for 1779 to 1787; the 1813 clerk calls him <em>vecino</em> and never <em>originario</em>, in contrast to Luis in 1854 who is <em>originario de Buenavista</em>; no caste is written for José Antonio in 1813 although the bride and the couple above him on the page both have one; and the marriage register was read end to end from 1753 to 1804 without them.</p>
-  </div>
+    <p class="gloss" style="font-family:var(--font-display);font-size:1.06rem;line-height:1.65;color:var(--ink-soft);max-width:var(--measure);margin:2.4rem 0 0">
+      Manuel and Felipa did not marry at Teocaltiche, and neither of them died there. Their marriage is not in that parish's registers, which survive unbroken from 1753 to 1804, nor in any indexed marriage in Mexico for the years they must have married. They appear in the parish for the first time as parents, already with children, already settled on a rancho. Everything about the record says the same thing: <b>they came from somewhere else, and they arrived shortly before 1788</b>. Finding that somewhere is the work that remains.
+    </p>
+  </section>
 
-  <p><strong>One document settles it.</strong> José Antonio's own baptism, from roughly January 1787 to January 1788, would state his rancho and his caste directly. It sits on an unindexed reel, <span class="film">DGS 4739969</span>, Teocaltiche baptisms 1787 to 1795, and can only be found by browsing the images.</p>
-</section>
+  <section>
+    <h2>Where they lived, and why they moved</h2>
+    <p class="section-lede">For four generations the family stayed inside a thirty-mile circle of Los Altos. Then, in one generation, they went north to Arizona, on to Kansas, back to Arizona, and were pushed into Mexico again.</p>
 
-<section>
-  <h2>Already searched. Do not repeat.</h2>
-  <p class="sec-note">The most useful part of this log. Every row below was worked to exhaustion and came back empty for Manuel Macías and María Felipa González.</p>
+    <div class="mapwrap">
+      <svg class="map" viewBox="0 0 717 792" role="img" aria-label="Map of northern Mexico and the southwestern United States showing where the family lived and how they moved">
+        <title>Where the Mac&#237;as family lived, 1788 to 1965</title>
+        <defs>
+          <clipPath id="frame"><rect x="0" y="0" width="717" height="792"/></clipPath>
+          <marker id="ah" viewBox="0 0 10 10" refX="7.5" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto">
+            <path class="ahd" d="M0,1.2 L9,5 L0,8.8 Z"/>
+          </marker>
+        </defs>
 
-  <div class="tw">
-  <table>
-    <thead>
-      <tr><th>Route</th><th>How it was worked</th><th>Result</th></tr>
-    </thead>
-    <tbody>
-      <tr><td>Teocaltiche marriage register, 1753&ndash;1804</td><td>Browsed end to end, from both the groom's and the bride's side</td><td>Clean. They did not marry here.</td></tr>
-      <tr><td>Teocaltiche <em>información matrimonial</em>, 1776&ndash;1794</td><td>Searched</td><td>Nothing</td></tr>
-      <tr><td><em>México matrimonios</em>, all of Mexico, 1775&ndash;1788</td><td>Searched</td><td>Nothing</td></tr>
-      <tr><td>Guadalajara diocesan dispensations, no place filter, 1775&ndash;1790</td><td>All <strong>311</strong> hits across four pages, individually accounted for</td><td>Exhausted. Zero.</td></tr>
-      <tr><td>guadalajaradispensas.com, the volunteer index</td><td><strong>12,117</strong> marriage entries parsed and searched</td><td>No Macías paired with any Felipa</td></tr>
-      <tr><td>Montagna's selected dispensation extractions</td><td>610 records; 37 contain a Macías</td><td>None ours. Note the file is selective, so this is a weak negative.</td></tr>
-      <tr><td>Teocaltiche burials 1783&ndash;1810 <span class="film">DGS 4741305</span></td><td>Searched; 45 Macías hits reviewed</td><td>Neither of them died here in that window</td></tr>
-      <tr><td>Teocaltiche burial extractions for the unfilmed years</td><td>Downloaded and read as images</td><td>Content stops around 1733. Too early to reach them.</td></tr>
-      <tr><td>Religious legitimation records</td><td>Searched</td><td>Coverage is effectively one parish. Useless as an instrument.</td></tr>
-      <tr><td>Religious Marriage Investigation Files, 720 hits</td><td>Place facet counts read</td><td>Michoacán 653, Guanajuato 246, <strong>no Jalisco at all</strong>. Wrong diocese.</td></tr>
-    </tbody>
-  </table>
-  </div>
+        <g clip-path="url(#frame)">
+          <path class="land us" d="M-150.9,-288.0 L712.1,-288.0 L712.2,-301.8 L722.7,-302.0 L728.3,-282.2 L738.0,-276.1 L821.8,-257.0 L847.1,-261.7 L895.6,-252.7 L923.5,-262.9 L1032.7,-212.4 L1041.1,-195.8 L1055.6,-198.4 L1063.4,-184.2 L1076.5,-179.8 L1072.7,-173.4 L1105.2,-156.5 L1118.0,-92.6 L1087.4,-38.9 L1100.8,-24.3 L1217.8,-67.1 L1210.5,-88.8 L1224.6,-94.5 L1283.8,-94.6 L1293.8,-108.7 L1344.7,-144.0 L1449.5,-144.3 L1452.6,-153.2 L1475.9,-160.6 L1496.4,-205.0 L1520.2,-232.1 L1530.6,-222.7 L1551.5,-228.8 L1565.3,-218.4 L1565.3,-169.3 L1591.1,-137.1 L1492.8,-96.6 L1471.0,-67.2 L1470.7,-48.1 L1481.0,-29.0 L1494.0,-28.1 L1490.7,-41.2 L1500.0,-33.2 L1497.5,-22.9 L1406.8,-7.9 L1380.8,2.5 L1426.6,-4.3 L1435.8,2.5 L1392.2,13.3 L1372.3,13.4 L1373.2,9.0 L1363.7,19.0 L1372.9,20.6 L1366.2,46.5 L1343.5,74.2 L1341.2,64.9 L1324.1,54.1 L1338.3,79.8 L1338.8,93.5 L1311.3,136.2 L1318.1,110.3 L1302.1,96.5 L1298.5,66.6 L1292.5,82.2 L1299.1,105.0 L1278.5,99.4 L1300.0,111.0 L1301.3,145.2 L1310.3,147.7 L1317.9,196.2 L1298.1,222.9 L1265.8,233.6 L1245.3,254.7 L1229.8,257.0 L1214.0,270.2 L1209.5,282.3 L1175.3,305.7 L1143.0,344.1 L1138.2,369.7 L1143.7,394.7 L1168.0,451.0 L1182.9,508.3 L1180.6,546.6 L1172.8,568.6 L1163.5,573.1 L1148.1,568.8 L1143.2,553.0 L1131.4,544.7 L1095.7,472.1 L1102.1,448.2 L1069.0,398.3 L1056.9,392.8 L1025.4,409.1 L985.2,381.6 L922.3,382.1 L885.6,390.2 L897.3,421.5 L891.4,426.3 L879.8,420.9 L868.1,427.8 L845.5,426.7 L822.2,407.6 L795.0,412.1 L772.3,403.8 L726.7,414.7 L650.3,474.1 L643.2,490.3 L642.8,515.2 L650.3,544.7 L638.2,545.8 L591.7,526.7 L576.1,484.6 L531.3,418.3 L509.3,403.9 L483.9,404.6 L464.2,433.1 L438.3,422.3 L422.2,411.4 L404.1,372.8 L358.3,332.8 L304.3,332.8 L304.2,347.7 L217.5,348.0 L99.3,305.1 L102.2,298.1 L27.2,304.7 L21.9,286.3 L1.7,265.6 L-12.8,261.3 L-16.2,251.0 L-81.8,230.1 L-85.6,210.4 L-115.8,174.2 L-141.8,124.1 L-140.7,115.8 L-178.6,73.7 L-182.9,44.4 L-199.5,24.7 L-192.6,-5.1 L-193.7,-36.0 L-203.7,-63.6 L-191.5,-97.5 L-183.9,-162.8 L-189.5,-211.1 L-208.5,-258.6 L-204.7,-265.7 L-159.6,-253.4 L-143.0,-219.5 L-135.3,-229.0 L-150.9,-288.0 Z"/>
+          <path class="land mx" d="M27.2,304.7 L102.2,298.1 L99.3,305.1 L217.5,348.0 L304.2,347.7 L304.3,332.8 L358.3,332.8 L404.1,372.8 L422.2,411.4 L438.3,422.3 L464.2,433.1 L483.9,404.6 L509.3,403.9 L531.3,418.3 L576.1,484.6 L591.7,526.7 L638.2,545.8 L650.3,544.7 L632.8,602.2 L627.5,668.0 L648.8,733.1 L689.0,798.2 L722.1,807.7 L735.0,822.8 L829.0,796.5 L848.9,781.8 L864.2,720.0 L918.3,702.2 L964.8,700.4 L972.3,708.1 L971.3,725.4 L954.5,746.8 L947.1,768.7 L952.8,775.0 L940.4,818.6 L932.5,809.4 L920.0,810.5 L908.8,832.2 L903.2,827.9 L899.6,834.9 L841.7,834.6 L841.7,854.8 L827.6,854.9 L859.2,885.2 L858.4,897.5 L818.4,897.6 L803.4,926.9 L807.9,933.7 L803.5,952.6 L752.1,902.2 L726.7,892.8 L668.5,912.5 L535.3,857.8 L501.4,831.0 L452.0,817.5 L439.0,801.1 L405.5,780.6 L389.9,757.9 L382.5,740.4 L392.9,736.9 L389.7,726.6 L396.8,717.3 L397.0,704.8 L373.2,656.1 L299.2,569.8 L272.5,555.1 L266.7,546.3 L271.5,524.1 L237.2,498.2 L229.4,473.0 L212.7,470.1 L179.9,433.6 L150.8,367.7 L151.2,353.8 L100.5,331.2 L95.5,345.8 L103.7,390.1 L147.4,440.8 L151.5,453.2 L157.1,452.7 L163.3,475.9 L199.0,516.1 L227.3,582.3 L229.0,601.3 L244.0,602.4 L267.8,634.9 L254.0,654.5 L248.4,654.4 L240.2,632.5 L219.8,612.0 L181.4,585.4 L177.7,539.6 L141.4,512.3 L137.3,517.0 L110.2,498.9 L91.8,478.0 L106.9,477.3 L118.5,463.9 L119.7,447.6 L95.7,421.9 L77.4,412.0 L27.2,304.7 Z"/>
 
-  <p>Two gaps are worth naming, because they may be permanent. The Teocaltiche <em>Defunciones</em> for <strong>1810 to 1819</strong> and <strong>1825 to 1833</strong> were never microfilmed and were never extracted. If either Manuel or Felipa died in those years, no online route exists to reach them.</p>
-</section>
+          <text class="cty" x="560" y="230">UNITED STATES</text>
+          <text class="cty" x="150" y="600">MEXICO</text>
 
-<section>
-  <h2>What is left to try</h2>
-  <p class="sec-note">In order. Everything here is doable from a browser without contacting anyone.</p>
+          <!-- movements -->
+          <path class="move" marker-end="url(#ah)" d="M468,688 Q 330,520 278,306"/>
+          <path class="move" marker-end="url(#ah)" d="M284,276 Q 430,148 604,101"/>
+          <path class="move" marker-end="url(#ah)" d="M612,110 Q 440,246 286,292"/>
+          <path class="move" marker-end="url(#ah)" d="M280,300 Q 312,332 350,331"/>
 
-  <ol class="tasks">
-    <li>
-      <h3>Browse the Teocaltiche baptisms for 1787 to 1795</h3>
-      <p><span class="film">DGS 4739969</span>. Unindexed, so browsing is the only way in. Looking for José Antonio's own baptism, which would settle the caste question; any <em>originario de</em> phrase, which would name the parish they came from; the rancho trail from Guadalupe to los Cuervos; and the godparents, who in a migrating family are usually kin.</p>
-    </li>
-    <li>
-      <h3>Religious Census records, twelve of them</h3>
-      <p>These are <em>padrones</em>, and they list name, <em>calidad</em>, age, household and rancho. Twelve records is a single pass, and it is the one remaining search that could give Manuel's own caste and age, which is the fact that tells us which register to read next.</p>
-    </li>
-    <li>
-      <h3>The padrones in catalog 32677</h3>
-      <p>A second padrón collection covering the Guadalajara diocese from 1639 to 1875, Teocaltiche included, and served as ordinary browsable images rather than the reading-room-restricted series. The best target is a Teocaltiche padrón from about 1817 to 1824, which would show José Antonio and Matiana as a household with ages and caste, and might show a widowed Felipa living with them.</p>
-    </li>
-    <li>
-      <h3>Chaplaincy and tithe records</h3>
-      <p>Twenty-one and fourteen records respectively. <em>Capellanía</em> foundations often carry proof-of-descent genealogies running back several generations, and tithe records place a household at a named rancho in a given year. Both small enough to read in full.</p>
-    </li>
-    <li>
-      <h3>Marriage registers of the candidate parishes, 1780 to 1787</h3>
-      <p>Encarnación de Díaz, Jalostotitlán, Aguascalientes, Nochistlán, Lagos, San Juan de los Lagos. A large browse with no shortcut, and the fallback if everything above fails.</p>
-    </li>
-  </ol>
-</section>
+          <text class="yr" x="366" y="503">1910&#8211;15 &#183; copper</text>
+          <text class="yr" x="434" y="139" text-anchor="middle">about 1920 &#183; the railroad</text>
+          <text class="yr" x="452" y="243" text-anchor="middle">about 1926 &#183; back to the mines</text>
+          <text class="yr" x="286" y="368" text-anchor="middle">1932 &#183; repatriated</text>
 
-<section>
-  <h2>Method notes</h2>
-  <p class="sec-note">Hard-won. Several of these were learned by getting them wrong first.</p>
+          <!-- Los Altos de Jalisco -->
+          <circle class="ring" cx="480" cy="699" r="26"/>
+          <circle class="dmx" cx="480.7" cy="704.5" r="4.5"/>
+          <circle class="dmx" cx="472.3" cy="707.0" r="4.5"/>
+          <circle class="dmx" cx="480.1" cy="695.9" r="3.4"/>
+          <circle class="dmx" cx="489.5" cy="688.3" r="3.4"/>
+          <text class="lbl" x="444" y="666" text-anchor="end">Los Altos de Jalisco</text>
+          <text class="sub" x="444" y="684" text-anchor="end">1788&#8211;1909 &#183; four generations</text>
+          <text class="nm" x="444" y="708" text-anchor="end">Manuel &amp; Mar&#237;a Felipa</text>
+          <text class="nm" x="444" y="725" text-anchor="end">Jos&#233; Antonio &amp; Matiana</text>
+          <text class="nm" x="444" y="742" text-anchor="end">Luis &amp; Dar&#237;a</text>
+          <text class="nm" x="444" y="759" text-anchor="end">Sotero &amp; Agustina</text>
 
-  <h3>A zero result usually describes the index, not the register</h3>
-  <p>This has caught us four separate times. Before trusting any negative, search for a document you already know exists. That single control test is what revealed that the Teocaltiche baptism corpus stops at 1787, which had been quietly invalidating conclusions for several days.</p>
+          <!-- Morenci -->
+          <circle class="dus" cx="269.4" cy="286.2" r="6"/>
+          <text class="lbl" x="253" y="252" text-anchor="end">Morenci, Arizona</text>
+          <text class="sub" x="253" y="270" text-anchor="end">1910&#8211;1932 &#183; copper mines</text>
+          <text class="nm" x="253" y="294" text-anchor="end">Bernardino, then Ascensi&#243;n,</text>
+          <text class="nm" x="253" y="311" text-anchor="end">then Manuel from 1915</text>
 
-  <h3>Read the place facet counts before paging through a large result set</h3>
-  <p>A 720-hit search across eight pages was closed in one click by reading the place counts and seeing that it contained no Jalisco material at all.</p>
+          <!-- Kansas -->
+          <circle class="dus" cx="617.3" cy="95.4" r="6"/>
+          <text class="lbl" x="602" y="42" text-anchor="end">Kansas</text>
+          <text class="sub" x="602" y="60" text-anchor="end">about 1920&#8211;1926</text>
+          <text class="nm" x="602" y="80" text-anchor="end">the whole household &#183; Carmen born 1925</text>
+          <text class="nm" x="602" y="97" text-anchor="end">at &#8220;Laines&#8221; &#183; probably Lyons, assumed</text>
 
-  <h3>The place filter behaves oppositely for two kinds of record</h3>
-  <p>Parish registers, meaning baptisms, marriages and burials, are filed by parish, so the place filter matches the record's own parish and should be used. Diocesan dispensation files are shelved centrally under Guadalajara, so the place filter matches the collection instead and will silently hide whole volumes. Clear it for those.</p>
+          <!-- Juarez / Ysleta -->
+          <circle class="dmx" cx="358.8" cy="333.4" r="6"/>
+          <circle class="dus" cx="369" cy="335" r="5"/>
+          <path class="leader" d="M360,342 L322,394"/>
+          <text class="lbl" x="316" y="404" text-anchor="end">Ciudad Ju&#225;rez &amp; Ysleta</text>
+          <text class="sub" x="316" y="422" text-anchor="end">a mile apart, on opposite banks</text>
+          <text class="nm" x="316" y="443" text-anchor="end">Manuel &amp; Ascensi&#243;n on the Mexican side, 1932&#8211;1965</text>
+          <text class="nm" x="316" y="460" text-anchor="end">Manuel commuted over the bridge to work in Texas</text>
+          <text class="nm" x="316" y="477" text-anchor="end">Lupe lived at Ysleta from about 1923</text>
+          <text class="nm" x="316" y="494" text-anchor="end">Carmen too, by 1943 &#8212; he was born a U.S. citizen</text>
+          <text class="nm" x="316" y="511" text-anchor="end">the two of them married at Zaragoza, 1944</text>
 
-  <h3>Given names abbreviate. Surnames are the reliable handle.</h3>
-  <p>Clerks write <em>Man.l</em> for Manuel constantly, so a quoted search on the full given name goes blind. A quoted name search matches a person entity rather than an adjacent string, which means intervening middle names are fine but abbreviations are fatal. Felipa González was findable precisely because neither part of her name gets shortened.</p>
+          <!-- Carlsbad -->
+          <circle class="dus" cx="429.3" cy="308.9" r="4.5"/>
+          <text class="lbl" x="442" y="292">New Mexico</text>
+          <text class="sub" x="442" y="309">Lupe born 1920 &#183; Carlsbad, assumed</text>
+          <path class="move" marker-end="url(#ah)" d="M424,315 Q 402,332 378,336"/>
+          <text class="yr" x="418" y="352">about 1920&#8211;23 &#183; to Texas</text>
+        </g>
+      </svg>
 
-  <h3>Flourished signatures manufacture people who never existed</h3>
-  <p>A promising <em>Manuel Macías</em> turned out to be the two-line signature of <em>Manuel María Gutiérrez Coronado</em>, the parish priest of Encarnación. The tell was that the same result listed both names as separate persons. When a person list holds two names sharing a distinctive given name, suspect one signature read twice.</p>
+      <p class="mapcap">Dots in green are places in Mexico, in copper the United States. The four generations at Los Altos lived inside a circle thirty miles across.</p>
+    </div>
 
-  <h3><em>España</em> in a places list usually means the caste, not the country</h3>
-  <p>The abbreviation <em>Esp.<sup>a</sup></em> for <em>español</em> or <em>española</em> gets promoted to a place called España by the indexer. It appears in dozens of results and in none of them does it point at Spain.</p>
+    <div class="era">
+      <div class="era-head"><p class="era-place">Teocaltiche, Jalisco</p><span class="era-span">1788 to about 1888</span></div>
+      <p class="era-why">A hundred years in one jurisdiction, moving between its ranchos: Guadalupe, then los Cuervos, then Buenavista. Day labourers throughout.</p>
+      <ul class="events">
+        <li><span class="when">28 May 1788</span><p class="what"><b>José María</b>, son of Manuel Macías and María Felipa González, baptised at fourteen days old. The family is at <b>Guadalupe</b> and is recorded <b>mulato</b>. This is the earliest document.<span class="doc">DGS 004739969 img 40</span></p></li>
+        <li><span class="when">14 Jan 1813</span><p class="what"><b>José Antonio Macías</b>, twenty-five, marries <b>Matiana Olmos</b>, twenty-two. Both of <b>los Cuervos</b>; her father is already dead.<span class="doc">DGS 004741298 img 264</span></p></li>
+        <li><span class="when">1833&ndash;34</span><p class="what"><b>Luis Macías</b> born at Buenavista.</p></li>
+        <li><span class="when">4 Feb 1854</span><p class="what">Luis, twenty, marries <b>Daría Acosta</b>, eighteen, at Nuestra Señora de los Dolores.</p></li>
+        <li><span class="when">about 1864</span><p class="what"><b>Sotero Macías</b> born.</p></li>
+        <li><span class="when">19 May 1881</span><p class="what"><b>Bernardino</b> born at midnight, baptised four days later.</p></li>
+        <li><span class="when">3 Jun 1886</span><p class="what"><b>Ascensión Cordero</b> born at Paso de Sotos, thirty miles away, and registered at Teocaltiche.</p></li>
+      </ul>
+    </div>
 
-  <h3>Year filters and year facets are coarse</h3>
-  <p>Records dated 1920, 1892 and 1742 all passed a filter set to 1775 to 1790, because the filter matches any year token found anywhere on the page. The facet itself emits impossible values like 1000 and 2019. Never tighten a year range in order to exclude, and never quote the year facet as a document's date.</p>
+    <div class="era">
+      <div class="era-head"><p class="era-place">Nochistlán, Zacatecas</p><span class="era-span">by 1890 to 1909</span></div>
+      <p class="era-why">The family crosses into Zacatecas, to the rancho of La Ciénega below Monte de las Duranes.</p>
+      <ul class="events">
+        <li><span class="when">7 Dec 1890</span><p class="what"><b>Ambrosio</b> born, registered at the civil office a week later.</p></li>
+        <li><span class="when">26 Dec 1892</span><p class="what"><b>Manuel</b> born at eight in the morning at La Ciénega.</p></li>
+        <li><span class="when">Jul&ndash;Aug 1893</span><p class="what">His father, grandfather and brother die within seven weeks. <b>See below.</b></p></li>
+      </ul>
+    </div>
 
-  <h3>Also worth knowing</h3>
-  <ul class="plain">
-    <li>Collection date ranges in titles are unreliable. A volume labelled 1778 to 1783 contained records from 1789.</li>
-    <li>There is a century-offset bug in the Jalisco church indexes. A record shown as 1884 is often 1784.</li>
-    <li>Filenames lie. A file called "Teocaltiche Deaths 1696-1819" contained extractions that stop in 1733.</li>
-    <li>FamilySearch offers a downloadable <strong>Transcript</strong> PDF for full-text pages. It gives the machine transcription of the whole page and is far faster than cropping images.</li>
-  </ul>
-</section>
+    <div class="era loss1893">
+      <div class="era-head"><p class="era-place">Seven weeks</p><span class="era-span">July to August 1893</span></div>
+      <p class="era-why">A fever went through the first ward of Teocaltiche and took three generations of Macías men. This is why the next generation left.</p>
+<div class="inset grief" style="max-width:44rem">
+      <h3>Teocaltiche and Nochistlán, 1893</h3>
+      <dl class="obit">
+        <dt>11 Feb</dt><dd><b>Manuel</b> is baptised at Nochistlán, seven weeks old.</dd>
+        <dt>6 Jul</dt><dd><b>Sotero Macías</b>, his father, dies at nine at night, aged twenty-nine, of <i>fríos viciosos</i>.</dd>
+        <dt>7 Jul</dt><dd><b>Daría Acosta</b> appears before the civil judge at ten in the morning to report her son's death.</dd>
+        <dt>17 Jul</dt><dd><b>Luis Macías</b>, her husband, dies at two in the morning of <i>fiebre</i>. She reports this one too, at the same office, at the same hour, and gives her own status as <i>viuda</i>.</dd>
+        <dt>20 Aug</dt><dd><b>Ambrosio</b>, Sotero's two-year-old son, dies at Nochistlán.</dd>
+      </dl>
+      <p style="margin-top:1.1rem">Manuel never knew his father. Sixteen years later his brother Bernardino left for the copper camps of Arizona, and in 1915 Manuel followed him.</p>
+    </div>
 
-<section>
-  <h2>Films and identifiers</h2>
-  <p class="sec-note">Teocaltiche parish, Nuestra Señora de los Dolores. Catalog "Registros parroquiales, 1627-1962", 224 reels, custodian Archivo Diocesano de Aguascalientes.</p>
+    <div class="cols" style="margin-top:2.2rem">
+      <div class="note">
+        <h3>What the register says killed them</h3>
+        <p>Sotero died of <b><i>fríos viciosos</i></b>, literally &ldquo;vicious chills&rdquo;, the phrase Mexican registrars used through the nineteenth century for the violent recurring fevers now understood as malarial. Luis&rsquo;s cause is written only as <b><i>fiebre</i></b>. Neither act uses the word epidemic.</p>
+      </div>
+      <div class="note">
+        <h3>Why July</h3>
+        <p>Both men died in the first weeks of the summer rains, which is when fever carried by standing water peaked in the barrancas of Los Altos. Both were <i>jornaleros</i>, day labourers working outdoors in it. Ambrosio, aged two, died six weeks later at Nochistlán, sixty miles away.</p>
+      </div>
+      <div class="note">
+        <h3>Daría did the reporting</h3>
+        <p>She was fifty. On 7 July she walked to the civil registry at ten in the morning and reported the death of her son. Eleven days later she returned to the same office, at the same hour, and reported her husband&rsquo;s. On the second act the clerk wrote her status as <b><i>viuda</i></b>. She lived another fifteen years.</p>
+      </div>
+      <div class="note">
+        <h3>What it set in motion</h3>
+        <p>In seven weeks the family lost its grandfather, its father and its youngest child, and Agustina was widowed with an infant and several older children. Three deaths in one household in one summer is not ordinary mortality. It is also the most likely reason that, when the next generation came of age, they left for Arizona rather than stay.</p>
+      </div>
+    </div>
+    </div>
 
-  <div class="tw">
-  <table>
-    <thead>
-      <tr><th>Record</th><th class="n">DGS</th><th>Status</th></tr>
-    </thead>
-    <tbody>
-      <tr><td>Baptisms 1779&ndash;1787</td><td class="n">4236592</td><td>Searched. 21 Macías hits, no Manuel.</td></tr>
-      <tr><td><strong>Baptisms 1787&ndash;1795</strong></td><td class="n">4739969</td><td><strong>Unindexed. Browse. Top priority.</strong></td></tr>
-      <tr><td>Baptisms 1795&ndash;1800</td><td class="n">4238945</td><td>Follow-on reel</td></tr>
-      <tr><td>Marriages including 1813</td><td class="n">4741298</td><td>1813 act read in full</td></tr>
-      <tr><td>Marriages 1753&ndash;1804</td><td class="n">4741295&ndash;97</td><td>Swept clean</td></tr>
-      <tr><td>Burials 1783&ndash;1810</td><td class="n">4741305</td><td>Searched. Neither of them.</td></tr>
-      <tr><td>Burials 1819&ndash;1825, 1833&ndash;1838</td><td class="n">4741306</td><td>Not yet worked</td></tr>
-      <tr><td>Padrones, Teocaltiche caja 63</td><td class="n">100565798</td><td>Restricted to reading rooms</td></tr>
-      <tr><td>Padrones, Guadalajara diocese 1639&ndash;1875</td><td class="n">cat 32677</td><td>Ordinary images. Includes Teocaltiche.</td></tr>
-    </tbody>
-  </table>
-  </div>
+    <div class="era us">
+      <div class="era-head"><p class="era-place">Morenci, Greenlee County, Arizona</p><span class="era-span">1910 to about 1919</span></div>
+      <p class="era-why">Copper. Morenci was the largest employer of Mexican labour in eastern Arizona, and Bernardino went first.</p>
+      <ul class="events">
+        <li><span class="when">1910</span><p class="what"><b>Ascensión Cordero</b> enters the United States.</p></li>
+        <li><span class="when">5 Mar 1914</span><p class="what"><b>Bernardino marries Ascensión</b> before a justice of the peace at Morenci.</p></li>
+        <li><span class="when">22 Apr 1914</span><p class="what">They marry again before a Catholic pastor, with a fresh licence. A <b>Santillán</b> stands witness, the surname of Manuel's sister's husband back in Nochistlán.</p></li>
+        <li><span class="when">2 Feb 1915</span><p class="what"><b>Candelaria</b> born at Morenci, the first child.</p></li>
+        <li><span class="when">1915</span><p class="what"><b>Manuel arrives</b>, aged twenty-two, and goes into the mines.</p></li>
+        <li><span class="when">25 Nov 1918</span><p class="what"><b>Ascensión Petronilo</b> born at Morenci, named for his mother and his grandfather.</p></li>
+      </ul>
+    </div>
 
-  <p>The 28 May 1788 baptism itself is <span class="film">ark:/61903/1:1:N2VZ-V9Q</span>. The 14 January 1813 marriage is <span class="film">ark:/61903/1:1:68H3-XMYF</span>.</p>
-</section>
+    <div class="era us">
+      <div class="era-head"><p class="era-place">Kansas</p><span class="era-span">about 1920 to about 1926</span></div>
+      <p class="era-why">Almost certainly railroad section work on the Santa Fe line, the other great draw for Mexican labour in those years. The family is absent from both the 1920 federal census and the 1925 state census, which is what usually happened to section-camp households.</p>
+      <ul class="events">
+        <li><span class="when">about 1920</span><p class="what"><b>Ester</b> born in Kansas.</p></li>
+        <li><span class="when">9 Apr 1925</span><p class="what"><b>Carmen</b> born at <b>&ldquo;Laines, Kansas&rdquo;</b>, the name he gave for his own birthplace on his draft card in 1943 and again at his wedding in 1944. No Kansas town of that name exists; the likeliest candidate is <b>Lyons</b>, in Rice County, one of the state&rsquo;s three salt-mining towns and a stop on the Santa Fe line.</p></li>
+      </ul>
+    </div>
 
-<section>
-  <h2>A caution kept deliberately in view</h2>
-  <div class="callout shut">
-    <span class="chip c-shut">Do not attach</span>
-    <h3>The Macías Valadés are a different family</h3>
-    <p>Nearly every Macías in the Guadalajara diocesan records of this period belongs to the <em>español</em> <strong>Macías Valadés</strong> of Lagos, Jalostotitlán, Ciénega de Mata and Asientos. They are well documented and it is tempting to graft onto them, particularly since online trees will connect the surname to a sixteenth-century conquistador in a few clicks.</p>
-    <p>Across eight generations of primary documents in this line, the name Valadés appears <strong>zero</strong> times. Nothing joins the two families. A promising candidate, Joseph Manuel Macías Valadés of Ciénega de Mata, was read in full and eliminated: he was <em>español</em>, and he married María Francisca Castañeda at Sierra de Pinos in February 1783, not a Felipa González.</p>
-    <p>Every generation needs its own record, or the answer is worth nothing.</p>
-  </div>
-</section>
+    <div class="era us">
+      <div class="era-head"><p class="era-place">Morenci again</p><span class="era-span">about 1926 to 1932</span></div>
+      <p class="era-why">Back to the copper. By now Bernardino is gone and Manuel heads the household.</p>
+      <ul class="events">
+        <li><span class="when">about 1926</span><p class="what">Manuel and Ascensión are recorded as married. No licence has ever been found in the Arizona index.</p></li>
+        <li><span class="when">22 Sep 1928</span><p class="what"><b>Manuel Jr.</b> born at Morenci.</p></li>
+        <li><span class="when">18 Apr 1930</span><p class="what">The census finds them all in Precinct 2: Manuel, thirty-eight, <b>copper miner</b>, rent five dollars a month, and seven in the household.</p></li>
+      </ul>
+    </div>
 
-<footer>
-  <p>Working document. Names, dates and places here are quoted from the records as written, including their spelling. Where something is inferred rather than documented, it is labelled as such. Corrections welcome and expected.</p>
-</footer>
+    <div class="era">
+      <div class="era-head"><p class="era-place">Zaragoza, Chihuahua</p><span class="era-span">1932 to 1939</span></div>
+      <p class="era-why">Repatriated. Between 1929 and 1936 something like a million people were pushed or persuaded out of the United States, many of them citizens. Manuel's own card records him as in the country from 1915 to 1932.</p>
+      <ul class="events">
+        <li><span class="when">1932</span><p class="what">The family leaves Arizona for Mexico.</p></li>
+        <li><span class="when">1933</span><p class="what">Manuel takes out a <b>local crossing card</b> and begins commuting over the Zaragoza bridge into Ysleta, Texas.<span class="doc">Form 548 &middot; NARA M1849 &middot; DGS 007721629 img 600</span></p></li>
+      </ul>
+    </div>
+
+    <div class="era">
+      <div class="era-head"><p class="era-place">Salvárcar, Ciudad Juárez</p><span class="era-span">1940 to 1965</span></div>
+      <p class="era-why">The last address. The children who were born in Arizona and Kansas were United States citizens and crossed freely; their father crossed on a card.</p>
+      <ul class="events">
+        <li><span class="when">16 Apr 1940</span><p class="what">Across the river, the census finds <b>Guadalupe Amézquita</b>, twenty and single, at <b>Ysleta, El Paso County</b>, with her widowed mother Isabel, four younger siblings and her grandmother Emilia. She is the only one of the children <b>born in New Mexico</b>; the rest are Texans.<span class="doc">1940 census &middot; E.D. 71-13 sheet 12A &middot; DGS 005456948 img 371</span></p></li>
+        <li><span class="when">12 Apr 1943</span><p class="what"><b>Carmen</b>, three days after turning eighteen, registers for the draft at <b>Fort Hancock, Hudspeth County, Texas</b>, giving his birthplace as <b>&ldquo;Laines, Kansas&rdquo;</b> &mdash; probably Lyons &mdash; and his father Manuel as his contact. He is five foot eight, and working for a man named B. E. Walker.<span class="doc">Texas WWII draft registrations &middot; ark 1:1:QL36-V136</span></p></li>
+        <li><span class="when">1943</span><p class="what">A typed card records his wife as <b>&ldquo;Ascencion Ortega de Macias&rdquo;</b>, the line that finally proved Ortega was her name and not his.<span class="doc">Form I-448 &middot; DGS 007721629 img 601</span></p></li>
+        <li><span class="when">8 Nov 1944</span><p class="what"><b>Carmen, nineteen, marries Guadalupe Amézquita, twenty-three</b>, at Zaragoza. The act gives his birthplace as <b>&ldquo;Laines, Kiansas&rdquo;</b>, the Mexican clerk&rsquo;s spelling of Kansas and names his parents: <b>Manuel Macías, farmer, of Nochistlán, Zacatecas</b>, and <b>Ascención Cordero, of Hidalgo, Jalisco</b>.<span class="doc">Acta 62 &middot; Zaragoza Registro Civil &middot; DGS 004865475 img 2311</span></p></li>
+        <li><span class="when">1945</span><p class="what">His last card, with photograph, fingerprint and signature. Card 39519, passport 336190.<span class="doc">Form I-190 &middot; DGS 007721632 img 982</span></p></li>
+        <li><span class="when">1965</span><p class="what"><b>Manuel dies</b>, aged seventy-two.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Still open</h2>
+    <p class="section-lede">Eight things this page cannot yet tell you, in order of how much they would change it.</p>
+    <div class="cols">
+      <div class="note" style="border-left:2px solid var(--mx)">
+        <h3>Where Manuel and Felipa came from</h3>
+        <p>The largest question on the page, and the one that would add the most. They married somewhere between about 1780 and 1786, and it was not Teocaltiche. Whichever parish that was, its registers hold their marriage, their parents' names, and the generation before them.</p>
+      </div>
+      <div class="note">
+        <h3>José Antonio's baptism</h3>
+        <p>He was twenty-five in January 1813, so born about 1787, and the 1788 baptism of his brother shows the family in the parish by May of that year. His own baptism has never been found, in Teocaltiche or anywhere else.</p>
+      </div>
+      <div class="note">
+        <h3>Where in New Mexico Lupe was born</h3>
+        <p>The 1940 census gives only <b>New Mexico</b>, with no town. <b>Carlsbad is an assumption</b>, resting on the 1944 marriage act, where a Mexican clerk wrote her birthplace as &ldquo;Calabad, N.M.&rdquo; A New Mexico birth record from 1920 would settle it, and her Texas-born siblings&rsquo; records would show how fast the family crossed.</p>
+      </div>
+      <div class="note">
+        <h3>Where Ortega comes from</h3>
+        <p>Ascensión's own surname was Cordero and her mother was an Arriaga. No document yet explains the Ortega she used for forty years.</p>
+      </div>
+      <div class="note">
+        <h3>Manuel's death record</h3>
+        <p>The family date is 1 June 1965 at Ciudad Juárez. The Juárez register for 31 May to 7 June was read page by page and he is not in it.</p>
+      </div>
+      <div class="note">
+        <h3>Which county in Kansas</h3>
+        <p><b>&ldquo;Laines&rdquo;</b> comes from Carmen himself, twice: on his draft card in 1943 and at his wedding in 1944. But no Kansas town of that name exists, and the family appears in neither the 1920 federal census nor the 1925 state census.</p><p style="margin-top:.7rem">He was two when the family left Kansas, so he never knew the place. It is a name heard from his parents in Spanish and written down by ear in west Texas fifteen years later. On that reading the likeliest candidate is <b>Lyons, in Rice County</b>: <i>LY-onz</i> is close to <i>Laines</i>, and Lyons was one of only three Kansas salt-mining towns that drew Mexican labour in those years, on the Santa Fe line the family would have followed. A Rice County household that looked promising turned out to be a different family, so nothing confirms it. The theory stands on the sound of the word and on where the work was.</p>
+      </div>
+      <div class="note">
+        <h3>When Ascensión died</h3>
+        <p>She was alive at Zaragoza in November 1944, listed with her own address on her son's marriage act. Nothing after that.</p>
+      </div>
+      <div class="note">
+        <h3>What happened to Bernardino</h3>
+        <p>He is in four Arizona documents between 1914 and 1918 and then nothing. No death record has been found in Arizona, Kansas or Mexico.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>The documents</h2>
+    <p class="section-lede">What the page rests on, in the order the family lived it.</p>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr><th>Record</th><th>Date</th><th>Where it is</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="rec">José María Macías, baptism</td><td>28 May 1788</td><td class="cite">Teocaltiche &middot; DGS 004739969 img 40</td></tr>
+          <tr><td class="rec">José Antonio Macías &times; Matiana Olmos, marriage</td><td>14 Jan 1813</td><td class="cite">Teocaltiche &middot; DGS 004741298 img 264</td></tr>
+          <tr><td class="rec">Luis Macías &times; Daría Acosta, marriage</td><td>4 Feb 1854</td><td class="cite">Teocaltiche &middot; DGS 004741301 img 70</td></tr>
+          <tr><td class="rec">Bernardino Macías, baptism</td><td>23 May 1881</td><td class="cite">Teocaltiche &middot; DGS 004032666 img 126</td></tr>
+          <tr><td class="rec">Ascensión Cordero, baptism and civil birth</td><td>5 Jun 1886</td><td class="cite">Villa Hidalgo &middot; filed at Teocaltiche</td></tr>
+          <tr><td class="rec">Ambrosio Macías, civil birth</td><td>14 Dec 1890</td><td class="cite">Nochistlán &middot; Zacatecas civil registration</td></tr>
+          <tr><td class="rec">Manuel Macías, baptism</td><td>11 Feb 1893</td><td class="cite">Nochistlán &middot; DGS 004239327 img 326, p. 486</td></tr>
+          <tr><td class="rec">Sotero Macías, death</td><td>7 Jul 1893</td><td class="cite">Teocaltiche &middot; DGS 004840122 img 449&ndash;450, no. 495</td></tr>
+          <tr><td class="rec">Luis Macías, death</td><td>17 Jul 1893</td><td class="cite">Teocaltiche &middot; DGS 004840122 img 459, no. 537</td></tr>
+          <tr><td class="rec">Bernardino &times; Ascensión, civil marriage</td><td>5 Mar 1914</td><td class="cite">Greenlee Co. &middot; DGS 004252263 img 802, p. 555</td></tr>
+          <tr><td class="rec">Bernardino &times; Ascensión, church marriage</td><td>22 Apr 1914</td><td class="cite">Greenlee Co. &middot; DGS 004252263 img 819, p. 572</td></tr>
+          <tr><td class="rec">Candelaria Macías, birth certificate</td><td>2 Feb 1915</td><td class="cite">Arizona &middot; state index 533</td></tr>
+          <tr><td class="rec">Ascensión Petronilo Macías, birth certificate</td><td>25 Nov 1918</td><td class="cite">Arizona &middot; state index 238</td></tr>
+          <tr><td class="rec">Manuel Macías Jr., birth certificate</td><td>22 Sep 1928</td><td class="cite">Arizona &middot; state index 233</td></tr>
+          <tr><td class="rec">Federal census, Morenci</td><td>18 Apr 1930</td><td class="cite">ED 6-3 sheet 28B, household 581</td></tr>
+          <tr><td class="rec">Manuel's border cards</td><td>1933, 1943, 1945</td><td class="cite">NARA M1849 &middot; Ysleta, Texas</td></tr>
+          <tr><td class="rec">Carmen Macías, WWII draft registration</td><td>12 Apr 1943</td><td class="cite">Fort Hancock, Tex. &middot; ark 1:1:QL36-V136</td></tr>
+          <tr><td class="rec">Federal census, Ysleta (Amézquita household)</td><td>16 Apr 1940</td><td class="cite">El Paso Co. &middot; DGS 005456948 img 371</td></tr>
+          <tr><td class="rec">Carmen &times; Guadalupe, marriage act</td><td>8 Nov 1944</td><td class="cite">Zaragoza, Chih. &middot; DGS 004865475 img 2311, acta 62</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer>
+    <span>Compiled August 2026. Every date here is transcribed from the document itself.</span>
+    <span>Ages in this family's death records run about ten years young. Trust the marriages.</span>
+    <span>The working notes behind this page, including what has already been searched, are in the <a href="research.html">research log</a>.</span>
+  </footer>
 
 </div>
 </body>
