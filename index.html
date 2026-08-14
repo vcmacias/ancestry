@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Macías Research Log · Teocaltiche &amp; Nochistlán</title>
+<meta name="description" content="Working research log for the Macías line of Teocaltiche, Jalisco and Nochistlán, Zacatecas. Evidence, open questions, and what has been ruled out.">
+<style>
+  :root{
+    --paper:#eceeec;
+    --card:#f6f7f5;
+    --ink:#15181c;
+    --ink-2:#41474e;
+    --ink-3:#6b7278;
+    --rule:#cfd4d3;
+    --rule-2:#dde1df;
+    --accent:#155e63;
+    --accent-2:#0f4247;
+    --ok:#2c5f3a;
+    --ok-bg:#e2ece3;
+    --open:#7d5410;
+    --open-bg:#f2e9d6;
+    --shut:#7b3030;
+    --shut-bg:#f0e2e1;
+    --serif: "Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+    --sans: -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,"Helvetica Neue",Arial,sans-serif;
+    --mono: ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --paper:#14171a; --card:#1b1f23; --ink:#e6e9e7; --ink-2:#b3bab8; --ink-3:#8b9391;
+      --rule:#2e3438; --rule-2:#262c30;
+      --accent:#63c6c6; --accent-2:#8fd8d6;
+      --ok:#8fd0a0; --ok-bg:#1c2c22;
+      --open:#e0bd76; --open-bg:#2e2517;
+      --shut:#e2a3a0; --shut-bg:#2d1d1d;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#14171a; --card:#1b1f23; --ink:#e6e9e7; --ink-2:#b3bab8; --ink-3:#8b9391;
+    --rule:#2e3438; --rule-2:#262c30;
+    --accent:#63c6c6; --accent-2:#8fd8d6;
+    --ok:#8fd0a0; --ok-bg:#1c2c22;
+    --open:#e0bd76; --open-bg:#2e2517;
+    --shut:#e2a3a0; --shut-bg:#2d1d1d;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:var(--sans); font-size:17px; line-height:1.62;
+    font-kerning:normal;
+  }
+  .wrap{max-width:820px; margin:0 auto; padding:0 24px 96px}
+
+  /* masthead */
+  header.top{padding:64px 0 28px; border-bottom:2px solid var(--ink)}
+  .eyebrow{
+    font-family:var(--mono); font-size:11.5px; letter-spacing:.14em;
+    text-transform:uppercase; color:var(--ink-3); margin:0 0 18px
+  }
+  h1{
+    font-family:var(--serif); font-weight:600; font-size:clamp(31px,5.4vw,46px);
+    line-height:1.1; margin:0 0 14px; text-wrap:balance; letter-spacing:-.012em;
+  }
+  .standfirst{
+    font-family:var(--serif); font-size:clamp(17px,2.2vw,20px); line-height:1.5;
+    color:var(--ink-2); margin:0; max-width:60ch;
+  }
+  .meta{
+    display:flex; flex-wrap:wrap; gap:8px 20px; margin:26px 0 0;
+    font-family:var(--mono); font-size:12px; color:var(--ink-3);
+  }
+
+  /* sections */
+  section{padding:44px 0 8px; border-bottom:1px solid var(--rule-2)}
+  section:last-of-type{border-bottom:none}
+  h2{
+    font-family:var(--serif); font-size:clamp(22px,3.2vw,28px); font-weight:600;
+    line-height:1.2; margin:0 0 6px; letter-spacing:-.008em; text-wrap:balance;
+  }
+  .sec-note{color:var(--ink-3); font-size:14.5px; margin:0 0 26px; max-width:62ch}
+  h3{
+    font-family:var(--sans); font-size:15px; font-weight:670; letter-spacing:.005em;
+    margin:30px 0 8px;
+  }
+  p{margin:0 0 15px; max-width:68ch}
+  a{color:var(--accent); text-decoration-thickness:1px; text-underline-offset:2px}
+  a:hover{color:var(--accent-2)}
+  a:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:2px}
+  strong{font-weight:640}
+  em{font-style:italic}
+  code, .film{
+    font-family:var(--mono); font-size:.88em; background:var(--card);
+    border:1px solid var(--rule-2); border-radius:3px; padding:1px 5px;
+  }
+
+  /* status chips */
+  .chip{
+    display:inline-block; font-family:var(--mono); font-size:10.5px; letter-spacing:.1em;
+    text-transform:uppercase; padding:3px 8px; border-radius:3px; vertical-align:2px;
+    white-space:nowrap;
+  }
+  .c-ok{background:var(--ok-bg); color:var(--ok)}
+  .c-open{background:var(--open-bg); color:var(--open)}
+  .c-shut{background:var(--shut-bg); color:var(--shut)}
+
+  /* descent chain */
+  .chain{list-style:none; margin:0; padding:0}
+  .chain > li{
+    position:relative; padding:0 0 26px 30px; border-left:2px solid var(--rule);
+  }
+  .chain > li:last-child{border-left-color:transparent; padding-bottom:4px}
+  .chain > li::before{
+    content:""; position:absolute; left:-6px; top:7px; width:10px; height:10px;
+    border-radius:50%; background:var(--paper); border:2px solid var(--accent);
+  }
+  .gen{
+    font-family:var(--mono); font-size:11px; letter-spacing:.11em; text-transform:uppercase;
+    color:var(--ink-3); display:block; margin-bottom:3px;
+  }
+  .names{font-family:var(--serif); font-size:19px; line-height:1.3; margin:0 0 3px}
+  .chain .src{font-size:13.5px; color:var(--ink-3); margin:4px 0 0; max-width:60ch}
+
+  /* callout */
+  .callout{
+    background:var(--card); border:1px solid var(--rule);
+    border-left:4px solid var(--open); border-radius:4px;
+    padding:20px 22px; margin:0 0 22px;
+  }
+  .callout.shut{border-left-color:var(--shut)}
+  .callout.ok{border-left-color:var(--ok)}
+  .callout h3{margin-top:0}
+  .callout p:last-child{margin-bottom:0}
+  .callout > .chip{margin-bottom:10px}
+
+  /* tables */
+  .tw{overflow-x:auto; margin:0 0 22px; border:1px solid var(--rule); border-radius:4px; background:var(--card)}
+  table{border-collapse:collapse; width:100%; font-size:14.5px; min-width:540px}
+  th,td{text-align:left; padding:10px 14px; border-bottom:1px solid var(--rule-2); vertical-align:top}
+  thead th{
+    font-family:var(--mono); font-size:11px; letter-spacing:.09em; text-transform:uppercase;
+    color:var(--ink-3); font-weight:500; background:transparent;
+    border-bottom:1px solid var(--rule);
+  }
+  tbody tr:last-child td{border-bottom:none}
+  td.n{font-family:var(--mono); font-variant-numeric:tabular-nums; white-space:nowrap}
+
+  /* task list */
+  ol.tasks{list-style:none; counter-reset:t; margin:0; padding:0}
+  ol.tasks > li{
+    counter-increment:t; position:relative; padding:0 0 22px 46px; margin:0;
+  }
+  ol.tasks > li::before{
+    content:counter(t); position:absolute; left:0; top:0;
+    font-family:var(--mono); font-size:12px; width:28px; height:28px;
+    display:grid; place-items:center; border:1px solid var(--rule);
+    border-radius:50%; color:var(--ink-3); background:var(--card);
+  }
+  ol.tasks h3{margin:2px 0 5px}
+  ol.tasks p{margin:0; font-size:15px; color:var(--ink-2)}
+
+  ul.plain{margin:0 0 18px; padding-left:20px}
+  ul.plain li{margin-bottom:8px; max-width:66ch}
+
+  footer{
+    margin-top:56px; padding-top:26px; border-top:2px solid var(--ink);
+    font-size:14px; color:var(--ink-3);
+  }
+  footer p{max-width:66ch}
+
+  @media (max-width:600px){
+    body{font-size:16.5px}
+    .wrap{padding:0 18px 72px}
+    header.top{padding-top:44px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <p class="eyebrow">Working research log</p>
+  <h1>The Macías line of Teocaltiche and Nochistlán</h1>
+  <p class="standfirst">A record of what the documents actually say, what is still open, and which avenues have already been closed. Kept so the same ground is not searched twice.</p>
+  <div class="meta">
+    <span>Updated 14 August 2026</span>
+    <span>Frontier: generation 9</span>
+    <span>Region: Los Altos de Jalisco &middot; Zacatecas</span>
+  </div>
+</header>
+
+<section>
+  <h2>Where the research stands</h2>
+  <p class="sec-note">In one paragraph, for anyone picking this up cold.</p>
+  <p>The line is documented without a gap from the present back to a couple named <strong>Manuel Macías and María Felipa González</strong>, who appear at Teocaltiche in the late 1780s. Every generation below them rests on its own primary record. Above them there is nothing. Their marriage is not in the Teocaltiche register, and the evidence says they arrived from another parish shortly before 1788. Finding that parish is the whole problem, and it would give us their parents, which would be generation nine.</p>
+  <p>One thing that looked settled has turned out not to be. The single document that describes this family's <em>calidad</em> (their recorded caste) may belong to a different couple with the same two names. That is set out below, because a good deal was built on it.</p>
+</section>
+
+<section>
+  <h2>The documented descent</h2>
+  <p class="sec-note">Each link below is carried by a named record, not by inference. The generations further down, and the family's move north into Kansas, New Mexico and Texas, are covered in the separate family narrative.</p>
+
+  <ol class="chain">
+    <li>
+      <span class="gen">Generation 8 &middot; the wall</span>
+      <p class="names"><strong>Manuel Macías</strong> and <strong>María Felipa González</strong></p>
+      <p class="src">Named as José Antonio's parents on the 1813 marriage act and again on an 1833 baptism. Married roughly 1780 to 1786, <strong>parish unknown</strong>. Neither has been found in a burial register.</p>
+    </li>
+    <li>
+      <span class="gen">Generation 7</span>
+      <p class="names"><strong>José Antonio Macías</strong> and <strong>Matiana de Olmos</strong></p>
+      <p class="src">Married 14 January 1813 at Nuestra Señora de los Dolores, Teocaltiche. He was 25, so born about 1787, and is called <em>vecino de los Cuervos</em>. Her father Lorenzo de Olmos was already deceased. José Antonio himself was dead before February 1854.</p>
+    </li>
+    <li>
+      <span class="gen">Generation 6</span>
+      <p class="names"><strong>Luis Macías</strong> and <strong>Daría Acosta Martínez</strong></p>
+      <p class="src">Of Buenavista, Teocaltiche. He was a day labourer. His civil death act of 17 July 1893 names him <em>hijo legítimo de Antonio Macías y de Matiana Olmos</em>, which is the hard link upward. Daría reported both his death and their son's, ten days apart.</p>
+    </li>
+    <li>
+      <span class="gen">Generation 5</span>
+      <p class="names"><strong>Sotero Macías</strong> and <strong>Agustina Ruiz</strong></p>
+      <p class="src">Sotero died at Teocaltiche on 6 July 1893, aged 29. His death act names his parents Luis Macías and Daría Acosta, and records Agustina Ruiz as his widow.</p>
+    </li>
+    <li>
+      <span class="gen">Generation 4</span>
+      <p class="names"><strong>Manuel Macías</strong>, born December 1892 at Nochistlán, Zacatecas</p>
+      <p class="src">Born about six months before his father Sotero died. From here the line continues into the United States and is told in the family narrative rather than here.</p>
+    </li>
+  </ol>
+</section>
+
+<section>
+  <h2>The open question that matters most</h2>
+  <p class="sec-note">Raised 14 August 2026. It affects how the whole line should be read.</p>
+
+  <div class="callout">
+    <span class="chip c-open">Unresolved</span>
+    <h3>Is the <em>mulato</em> designation actually this family's?</h3>
+    <p>A baptism of <strong>28 May 1788</strong> at the <em>puesto de Guadalupe</em> in Teocaltiche parish records <strong>José María Macías</strong>, son of <em>José Manuel Macías and María Felipa González</em>, and the children of that couple are written <strong>mulato</strong>. It is the only document that gives this family a caste, and a lot has been reasoned from it.</p>
+    <p>The problem is that the act is joined to our line <strong>only by the parents' names matching</strong>. Three things weaken that:</p>
+    <ul class="plain">
+      <li>It is a <strong>different rancho</strong>. The 1788 act is at the <em>puesto de Guadalupe</em>; José Antonio in 1813 is at <em>los Cuervos</em>.</li>
+      <li>José María is a <strong>presumed brother, never a documented one</strong>. No record names him and José Antonio together.</li>
+      <li>Teocaltiche had <strong>three or four different women called Felipa González inside five years</strong>, one of them a <em>Doña</em>, and Manuel Macías is a common name. In this parish, matching two names is weak evidence.</li>
+    </ul>
+    <p>If the 1788 act belongs to another couple, then <em>mulato</em> is not this family's designation, and the assumption that the surname may not lead back to a Spanish immigrant loses its main support.</p>
+  </div>
+
+  <div class="callout ok">
+    <span class="chip c-ok">Unaffected</span>
+    <h3>The couple were incomers. That still holds.</h3>
+    <p>This conclusion does not depend on the 1788 act. It stands on four independent legs: José Antonio is absent from the Teocaltiche baptisms for 1779 to 1787; the 1813 clerk calls him <em>vecino</em> and never <em>originario</em>, in contrast to Luis in 1854 who is <em>originario de Buenavista</em>; no caste is written for José Antonio in 1813 although the bride and the couple above him on the page both have one; and the marriage register was read end to end from 1753 to 1804 without them.</p>
+  </div>
+
+  <p><strong>One document settles it.</strong> José Antonio's own baptism, from roughly January 1787 to January 1788, would state his rancho and his caste directly. It sits on an unindexed reel, <span class="film">DGS 4739969</span>, Teocaltiche baptisms 1787 to 1795, and can only be found by browsing the images.</p>
+</section>
+
+<section>
+  <h2>Already searched. Do not repeat.</h2>
+  <p class="sec-note">The most useful part of this log. Every row below was worked to exhaustion and came back empty for Manuel Macías and María Felipa González.</p>
+
+  <div class="tw">
+  <table>
+    <thead>
+      <tr><th>Route</th><th>How it was worked</th><th>Result</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Teocaltiche marriage register, 1753&ndash;1804</td><td>Browsed end to end, from both the groom's and the bride's side</td><td>Clean. They did not marry here.</td></tr>
+      <tr><td>Teocaltiche <em>información matrimonial</em>, 1776&ndash;1794</td><td>Searched</td><td>Nothing</td></tr>
+      <tr><td><em>México matrimonios</em>, all of Mexico, 1775&ndash;1788</td><td>Searched</td><td>Nothing</td></tr>
+      <tr><td>Guadalajara diocesan dispensations, no place filter, 1775&ndash;1790</td><td>All <strong>311</strong> hits across four pages, individually accounted for</td><td>Exhausted. Zero.</td></tr>
+      <tr><td>guadalajaradispensas.com, the volunteer index</td><td><strong>12,117</strong> marriage entries parsed and searched</td><td>No Macías paired with any Felipa</td></tr>
+      <tr><td>Montagna's selected dispensation extractions</td><td>610 records; 37 contain a Macías</td><td>None ours. Note the file is selective, so this is a weak negative.</td></tr>
+      <tr><td>Teocaltiche burials 1783&ndash;1810 <span class="film">DGS 4741305</span></td><td>Searched; 45 Macías hits reviewed</td><td>Neither of them died here in that window</td></tr>
+      <tr><td>Teocaltiche burial extractions for the unfilmed years</td><td>Downloaded and read as images</td><td>Content stops around 1733. Too early to reach them.</td></tr>
+      <tr><td>Religious legitimation records</td><td>Searched</td><td>Coverage is effectively one parish. Useless as an instrument.</td></tr>
+      <tr><td>Religious Marriage Investigation Files, 720 hits</td><td>Place facet counts read</td><td>Michoacán 653, Guanajuato 246, <strong>no Jalisco at all</strong>. Wrong diocese.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p>Two gaps are worth naming, because they may be permanent. The Teocaltiche <em>Defunciones</em> for <strong>1810 to 1819</strong> and <strong>1825 to 1833</strong> were never microfilmed and were never extracted. If either Manuel or Felipa died in those years, no online route exists to reach them.</p>
+</section>
+
+<section>
+  <h2>What is left to try</h2>
+  <p class="sec-note">In order. Everything here is doable from a browser without contacting anyone.</p>
+
+  <ol class="tasks">
+    <li>
+      <h3>Browse the Teocaltiche baptisms for 1787 to 1795</h3>
+      <p><span class="film">DGS 4739969</span>. Unindexed, so browsing is the only way in. Looking for José Antonio's own baptism, which would settle the caste question; any <em>originario de</em> phrase, which would name the parish they came from; the rancho trail from Guadalupe to los Cuervos; and the godparents, who in a migrating family are usually kin.</p>
+    </li>
+    <li>
+      <h3>Religious Census records, twelve of them</h3>
+      <p>These are <em>padrones</em>, and they list name, <em>calidad</em>, age, household and rancho. Twelve records is a single pass, and it is the one remaining search that could give Manuel's own caste and age, which is the fact that tells us which register to read next.</p>
+    </li>
+    <li>
+      <h3>The padrones in catalog 32677</h3>
+      <p>A second padrón collection covering the Guadalajara diocese from 1639 to 1875, Teocaltiche included, and served as ordinary browsable images rather than the reading-room-restricted series. The best target is a Teocaltiche padrón from about 1817 to 1824, which would show José Antonio and Matiana as a household with ages and caste, and might show a widowed Felipa living with them.</p>
+    </li>
+    <li>
+      <h3>Chaplaincy and tithe records</h3>
+      <p>Twenty-one and fourteen records respectively. <em>Capellanía</em> foundations often carry proof-of-descent genealogies running back several generations, and tithe records place a household at a named rancho in a given year. Both small enough to read in full.</p>
+    </li>
+    <li>
+      <h3>Marriage registers of the candidate parishes, 1780 to 1787</h3>
+      <p>Encarnación de Díaz, Jalostotitlán, Aguascalientes, Nochistlán, Lagos, San Juan de los Lagos. A large browse with no shortcut, and the fallback if everything above fails.</p>
+    </li>
+  </ol>
+</section>
+
+<section>
+  <h2>Method notes</h2>
+  <p class="sec-note">Hard-won. Several of these were learned by getting them wrong first.</p>
+
+  <h3>A zero result usually describes the index, not the register</h3>
+  <p>This has caught us four separate times. Before trusting any negative, search for a document you already know exists. That single control test is what revealed that the Teocaltiche baptism corpus stops at 1787, which had been quietly invalidating conclusions for several days.</p>
+
+  <h3>Read the place facet counts before paging through a large result set</h3>
+  <p>A 720-hit search across eight pages was closed in one click by reading the place counts and seeing that it contained no Jalisco material at all.</p>
+
+  <h3>The place filter behaves oppositely for two kinds of record</h3>
+  <p>Parish registers, meaning baptisms, marriages and burials, are filed by parish, so the place filter matches the record's own parish and should be used. Diocesan dispensation files are shelved centrally under Guadalajara, so the place filter matches the collection instead and will silently hide whole volumes. Clear it for those.</p>
+
+  <h3>Given names abbreviate. Surnames are the reliable handle.</h3>
+  <p>Clerks write <em>Man.l</em> for Manuel constantly, so a quoted search on the full given name goes blind. A quoted name search matches a person entity rather than an adjacent string, which means intervening middle names are fine but abbreviations are fatal. Felipa González was findable precisely because neither part of her name gets shortened.</p>
+
+  <h3>Flourished signatures manufacture people who never existed</h3>
+  <p>A promising <em>Manuel Macías</em> turned out to be the two-line signature of <em>Manuel María Gutiérrez Coronado</em>, the parish priest of Encarnación. The tell was that the same result listed both names as separate persons. When a person list holds two names sharing a distinctive given name, suspect one signature read twice.</p>
+
+  <h3><em>España</em> in a places list usually means the caste, not the country</h3>
+  <p>The abbreviation <em>Esp.<sup>a</sup></em> for <em>español</em> or <em>española</em> gets promoted to a place called España by the indexer. It appears in dozens of results and in none of them does it point at Spain.</p>
+
+  <h3>Year filters and year facets are coarse</h3>
+  <p>Records dated 1920, 1892 and 1742 all passed a filter set to 1775 to 1790, because the filter matches any year token found anywhere on the page. The facet itself emits impossible values like 1000 and 2019. Never tighten a year range in order to exclude, and never quote the year facet as a document's date.</p>
+
+  <h3>Also worth knowing</h3>
+  <ul class="plain">
+    <li>Collection date ranges in titles are unreliable. A volume labelled 1778 to 1783 contained records from 1789.</li>
+    <li>There is a century-offset bug in the Jalisco church indexes. A record shown as 1884 is often 1784.</li>
+    <li>Filenames lie. A file called "Teocaltiche Deaths 1696-1819" contained extractions that stop in 1733.</li>
+    <li>FamilySearch offers a downloadable <strong>Transcript</strong> PDF for full-text pages. It gives the machine transcription of the whole page and is far faster than cropping images.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Films and identifiers</h2>
+  <p class="sec-note">Teocaltiche parish, Nuestra Señora de los Dolores. Catalog "Registros parroquiales, 1627-1962", 224 reels, custodian Archivo Diocesano de Aguascalientes.</p>
+
+  <div class="tw">
+  <table>
+    <thead>
+      <tr><th>Record</th><th class="n">DGS</th><th>Status</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Baptisms 1779&ndash;1787</td><td class="n">4236592</td><td>Searched. 21 Macías hits, no Manuel.</td></tr>
+      <tr><td><strong>Baptisms 1787&ndash;1795</strong></td><td class="n">4739969</td><td><strong>Unindexed. Browse. Top priority.</strong></td></tr>
+      <tr><td>Baptisms 1795&ndash;1800</td><td class="n">4238945</td><td>Follow-on reel</td></tr>
+      <tr><td>Marriages including 1813</td><td class="n">4741298</td><td>1813 act read in full</td></tr>
+      <tr><td>Marriages 1753&ndash;1804</td><td class="n">4741295&ndash;97</td><td>Swept clean</td></tr>
+      <tr><td>Burials 1783&ndash;1810</td><td class="n">4741305</td><td>Searched. Neither of them.</td></tr>
+      <tr><td>Burials 1819&ndash;1825, 1833&ndash;1838</td><td class="n">4741306</td><td>Not yet worked</td></tr>
+      <tr><td>Padrones, Teocaltiche caja 63</td><td class="n">100565798</td><td>Restricted to reading rooms</td></tr>
+      <tr><td>Padrones, Guadalajara diocese 1639&ndash;1875</td><td class="n">cat 32677</td><td>Ordinary images. Includes Teocaltiche.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p>The 28 May 1788 baptism itself is <span class="film">ark:/61903/1:1:N2VZ-V9Q</span>. The 14 January 1813 marriage is <span class="film">ark:/61903/1:1:68H3-XMYF</span>.</p>
+</section>
+
+<section>
+  <h2>A caution kept deliberately in view</h2>
+  <div class="callout shut">
+    <span class="chip c-shut">Do not attach</span>
+    <h3>The Macías Valadés are a different family</h3>
+    <p>Nearly every Macías in the Guadalajara diocesan records of this period belongs to the <em>español</em> <strong>Macías Valadés</strong> of Lagos, Jalostotitlán, Ciénega de Mata and Asientos. They are well documented and it is tempting to graft onto them, particularly since online trees will connect the surname to a sixteenth-century conquistador in a few clicks.</p>
+    <p>Across eight generations of primary documents in this line, the name Valadés appears <strong>zero</strong> times. Nothing joins the two families. A promising candidate, Joseph Manuel Macías Valadés of Ciénega de Mata, was read in full and eliminated: he was <em>español</em>, and he married María Francisca Castañeda at Sierra de Pinos in February 1783, not a Felipa González.</p>
+    <p>Every generation needs its own record, or the answer is worth nothing.</p>
+  </div>
+</section>
+
+<footer>
+  <p>Working document. Names, dates and places here are quoted from the records as written, including their spelling. Where something is inferred rather than documented, it is labelled as such. Corrections welcome and expected.</p>
+</footer>
+
+</div>
+</body>
+</html>
