@@ -316,6 +316,8 @@
   .map .leader{fill:none;stroke:var(--rule);stroke-width:1}
   .map .numc{fill:var(--paper);stroke:var(--us);stroke-width:1.5}
   .map .nm{font-family:var(--font-sans);font-size:12.5px;fill:var(--ink-soft)}
+  .map .pl{font-family:var(--font-sans);font-size:12.5px;font-weight:600;fill:var(--ink)}
+  .map .lead{fill:none;stroke:var(--mx);stroke-width:1;opacity:.45}
   .map .yr{
     font-family:var(--font-sans);font-size:12.5px;font-weight:700;
     fill:var(--us);letter-spacing:.02em;
@@ -645,7 +647,20 @@
           <circle class="dmx" cx="480.7" cy="704.5" r="4.5"/>
           <circle class="dmx" cx="472.3" cy="707.0" r="4.5"/>
           <circle class="dmx" cx="480.1" cy="695.9" r="3.4"/>
-          <circle class="dmx" cx="489.5" cy="688.3" r="3.4"/>
+
+          <!-- named places, leadered out to the right -->
+          <path class="lead" d="M483.2,694 L 508,640"/>
+          <path class="lead" d="M484.8,704 L 508,680"/>
+          <path class="lead" d="M475.9,709 L 508,720"/>
+          <text class="pl" x="514" y="644">Villa Hidalgo</text>
+          <text class="sub" x="514" y="657">Jalisco &#183; Paso de Sotos</text>
+          <text class="pl" x="514" y="684">Teocaltiche</text>
+          <text class="sub" x="514" y="697">Jalisco</text>
+          <text class="pl" x="514" y="724">Nochistl&#225;n de Mej&#237;a</text>
+          <text class="sub" x="514" y="737">Zacatecas</text>
+          <text class="sub" x="514" y="750">its ranchos: La Ci&#233;nega</text>
+          <text class="sub" x="514" y="763">and Monte de las Duranes</text>
+
           <text class="lbl" x="444" y="666" text-anchor="end">Los Altos de Jalisco</text>
           <text class="sub" x="444" y="684" text-anchor="end">1788&#8211;1909 &#183; four generations</text>
           <text class="nm" x="444" y="708" text-anchor="end">Manuel &amp; Mar&#237;a Felipa</text>
@@ -672,7 +687,7 @@
           <circle class="dus" cx="369" cy="335" r="5"/>
           <path class="leader" d="M360,342 L322,394"/>
           <text class="lbl" x="316" y="404" text-anchor="end">Ciudad Ju&#225;rez &amp; Ysleta</text>
-          <text class="sub" x="316" y="422" text-anchor="end">a mile apart, on opposite banks</text>
+          <text class="sub" x="316" y="422" text-anchor="end">Chihuahua &amp; Texas, a mile apart</text>
           <text class="nm" x="316" y="443" text-anchor="end">Manuel &amp; Ascensi&#243;n on the Mexican side, 1932&#8211;1965</text>
           <text class="nm" x="316" y="460" text-anchor="end">Manuel crossed the bridge on a local card from 1933</text>
           <text class="nm" x="316" y="477" text-anchor="end">Lupe lived at Ysleta from about 1923</text>
